@@ -30,7 +30,11 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-
+h2 {
+  padding-bottom: 10px;
+  font-size: 32px;
+  background: url('../images/bg_hr.png') repeat-x bottom;
+}
 /*******************************************************************************
 Theme Styles
 *******************************************************************************/
