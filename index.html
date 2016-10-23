@@ -8,55 +8,1268 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Csgo.GitHub.io</title>
+    <title>CSGO Betting</title>
   </head>
 
   <body>
 
     <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/SaH-Sage/csgo.github.io">View on GitHub</a>
+    <nav class="menu">
+        <ul>
+          <li class="left"><a class="welcome" href="#home"><label ID="LabelWelcome" onclick="LabelWelcome_Click" runat="server"><i class="fa fa-user" aria-hidden="true"></i> Login/registrer </label></a>
+            <ul>
+              <li><div class="login">
+                <asp:TextBox id="InputTextEmailL" CssClass="login" placeholder="Epost adresse" runat="server" TextMode="Email"></asp:TextBox>
+                <div class="icon"><i class="fa fa-envelope-o fa-fw"></i></div></div>
+              </li>
+              <li><div class="login">
+                <asp:TextBox id="InputPasswordL" Cssclass="login" placeholder="Passord" runat="server" TextMode="Password"></asp:TextBox>
+                <div class="icon"><i class="fa fa-key fa-fw"></i></div></div>
+              </li>
+              <li>
+                <label for="registration" class="lable-error">Husk meg:</label>
+                <input id="Checkbox1" type="checkbox" />
+                <asp:Label ID="LabelErrorL" runat="server" Cssclass="lable-error" ForeColor="Red"></asp:Label>
+              </li>
+              <li> 
+                <asp:Button id="InputSubmitLogin" OnClick="InputSubmitLogin_Click" runat="server" Text="Logg in" class="login button-clean" style="width:70px; margin-right:10px;"></asp:Button>
+                <label for="registration" class="toggle">Ingen konto? Register!</label>
+                <div>
+                  <input type="checkbox" id="registration" class="hide" />
+                  <label for="registration" class="overlay-top"></label>
+                  <div class="overlay-content-top">
+                    <div class="registration">
+                      <h2>Registrer kontoen din</h2> 
+                      <div class="registration-info">
+                        <label for="UserName">Brukernavn:</label>
+                        <asp:TextBox ID="TextBoxUsernameR" class="shadow" runat="server" placeholder="Brukernavn"></asp:TextBox>
 
-          <h1 id="project_title">Csgo.GitHub.io</h1>
-          <h2 id="project_tagline">Stuff</h2>
+                        <label for="FirstName">Fornavn:</label>
+                        <asp:TextBox ID="TextBoxFirstNameR" class="shadow" runat="server" placeholder="Fornavn"></asp:TextBox>
+                        
+                        <label for="SirName">Etternavn:</label>
+                        <asp:TextBox ID="TextBoxSirnameR" class="shadow" runat="server" placeholder="Etternavn"></asp:TextBox>
+                        
+                        <label for="Birt">Fødselsdato:</label>
+                        <asp:DropDownList ID="DropDownListBirthDayR" runat="server" CssClass="dropdown birth birth-day" >
+                            <asp:ListItem>1</asp:ListItem>
+                            <asp:ListItem>2</asp:ListItem>
+                            <asp:ListItem>3</asp:ListItem>
+                            <asp:ListItem>4</asp:ListItem>
+                            <asp:ListItem>5</asp:ListItem>
+                            <asp:ListItem>6</asp:ListItem>
+                            <asp:ListItem>7</asp:ListItem>
+                            <asp:ListItem>8</asp:ListItem>
+                            <asp:ListItem>9</asp:ListItem>
+                            <asp:ListItem>10</asp:ListItem>
+                            <asp:ListItem>11</asp:ListItem>
+                            <asp:ListItem>12</asp:ListItem>
+                            <asp:ListItem>13</asp:ListItem>
+                            <asp:ListItem>14</asp:ListItem>
+                            <asp:ListItem>15</asp:ListItem>
+                            <asp:ListItem>16</asp:ListItem>
+                            <asp:ListItem>17</asp:ListItem>
+                            <asp:ListItem>18</asp:ListItem>
+                            <asp:ListItem>19</asp:ListItem>
+                            <asp:ListItem>20</asp:ListItem>
+                            <asp:ListItem>21</asp:ListItem>
+                            <asp:ListItem>22</asp:ListItem>
+                            <asp:ListItem>23</asp:ListItem>
+                            <asp:ListItem>24</asp:ListItem>
+                            <asp:ListItem>25</asp:ListItem>
+                            <asp:ListItem>26</asp:ListItem>
+                            <asp:ListItem>27</asp:ListItem>
+                            <asp:ListItem>28</asp:ListItem>
+                            <asp:ListItem>29</asp:ListItem>
+                            <asp:ListItem>30</asp:ListItem>
+                            <asp:ListItem>31</asp:ListItem>
+                          </asp:DropDownList>
+                        <asp:DropDownList ID="DropDownListBirthMonthR" runat="server" CssClass="dropdown birth birth-month">
+                            <asp:ListItem value="01" selected hidden>Måned</asp:ListItem>
+                            <asp:ListItem value="01">januar</asp:ListItem>
+                            <asp:ListItem value="02">februar</asp:ListItem>
+                            <asp:ListItem value="03">mars</asp:ListItem>
+                            <asp:ListItem value="04">april</asp:ListItem>
+                            <asp:ListItem value="05">mai</asp:ListItem>
+                            <asp:ListItem value="06">juni</asp:ListItem>
+                            <asp:ListItem value="07">juli</asp:ListItem>
+                            <asp:ListItem value="08">august</asp:ListItem>
+                            <asp:ListItem value="09">september</asp:ListItem>
+                            <asp:ListItem value="10">oktober</asp:ListItem>
+                            <asp:ListItem value="11">november</asp:ListItem>
+                            <asp:ListItem value="12">desember</asp:ListItem>
+                          </asp:DropDownList>
+                        <asp:DropDownList ID="DropDownListBirthYearR" runat="server" CssClass="dropdown birth birth-year">
+                            <asp:ListItem>2015</asp:ListItem>
+                            <asp:ListItem>2014</asp:ListItem>
+                            <asp:ListItem>2013</asp:ListItem>
+                            <asp:ListItem>2012</asp:ListItem>
+                            <asp:ListItem>2011</asp:ListItem>
+                            <asp:ListItem>2010</asp:ListItem>
+                            <asp:ListItem>2009</asp:ListItem>
+                            <asp:ListItem>2008</asp:ListItem>
+                            <asp:ListItem>2007</asp:ListItem>
+                            <asp:ListItem>2006</asp:ListItem>
+                            <asp:ListItem>2005</asp:ListItem>
+                            <asp:ListItem>2004</asp:ListItem>
+                            <asp:ListItem>2003</asp:ListItem>
+                            <asp:ListItem>2002</asp:ListItem>
+                            <asp:ListItem>2001</asp:ListItem>
+                            <asp:ListItem>2000</asp:ListItem>
+                            <asp:ListItem>1999</asp:ListItem>
+                            <asp:ListItem>1998</asp:ListItem>
+                            <asp:ListItem>1997</asp:ListItem>
+                            <asp:ListItem>1996</asp:ListItem>
+                            <asp:ListItem>1995</asp:ListItem>
+                            <asp:ListItem>1994</asp:ListItem>
+                            <asp:ListItem>1993</asp:ListItem>
+                            <asp:ListItem>1992</asp:ListItem>
+                            <asp:ListItem>1991</asp:ListItem>
+                            <asp:ListItem>1990</asp:ListItem>
+                            <asp:ListItem>1989</asp:ListItem>
+                            <asp:ListItem>1988</asp:ListItem>
+                            <asp:ListItem>1987</asp:ListItem>
+                            <asp:ListItem>1986</asp:ListItem>
+                            <asp:ListItem>1985</asp:ListItem>
+                            <asp:ListItem>1984</asp:ListItem>
+                            <asp:ListItem>1983</asp:ListItem>
+                            <asp:ListItem>1982</asp:ListItem>
+                            <asp:ListItem>1981</asp:ListItem>
+                            <asp:ListItem>1980</asp:ListItem>
+                            <asp:ListItem>1979</asp:ListItem>
+                            <asp:ListItem>1978</asp:ListItem>
+                            <asp:ListItem>1977</asp:ListItem>
+                            <asp:ListItem>1976</asp:ListItem>
+                            <asp:ListItem>1975</asp:ListItem>
+                            <asp:ListItem>1974</asp:ListItem>
+                            <asp:ListItem>1973</asp:ListItem>
+                            <asp:ListItem>1972</asp:ListItem>
+                            <asp:ListItem>1971</asp:ListItem>
+                            <asp:ListItem>1970</asp:ListItem>
+                            <asp:ListItem>1969</asp:ListItem>
+                            <asp:ListItem>1968</asp:ListItem>
+                            <asp:ListItem>1967</asp:ListItem>
+                            <asp:ListItem>1966</asp:ListItem>
+                            <asp:ListItem>1965</asp:ListItem>
+                            <asp:ListItem>1964</asp:ListItem>
+                            <asp:ListItem>1963</asp:ListItem>
+                            <asp:ListItem>1962</asp:ListItem>
+                            <asp:ListItem>1961</asp:ListItem>
+                            <asp:ListItem>1960</asp:ListItem>
+                            <asp:ListItem>1959</asp:ListItem>
+                            <asp:ListItem>1958</asp:ListItem>
+                            <asp:ListItem>1957</asp:ListItem>
+                            <asp:ListItem>1956</asp:ListItem>
+                            <asp:ListItem>1955</asp:ListItem>
+                            <asp:ListItem>1954</asp:ListItem>
+                            <asp:ListItem>1953</asp:ListItem>
+                            <asp:ListItem>1952</asp:ListItem>
+                            <asp:ListItem>1951</asp:ListItem>
+                            <asp:ListItem>1950</asp:ListItem>
+                            <asp:ListItem>1949</asp:ListItem>
+                            <asp:ListItem>1948</asp:ListItem>
+                            <asp:ListItem>1947</asp:ListItem>
+                            <asp:ListItem>1946</asp:ListItem>
+                            <asp:ListItem>1945</asp:ListItem>
+                            <asp:ListItem>1944</asp:ListItem>
+                            <asp:ListItem>1943</asp:ListItem>
+                            <asp:ListItem>1942</asp:ListItem>
+                            <asp:ListItem>1941</asp:ListItem>
+                            <asp:ListItem>1940</asp:ListItem>
+                            <asp:ListItem>1939</asp:ListItem>
+                            <asp:ListItem>1938</asp:ListItem>
+                            <asp:ListItem>1939</asp:ListItem>
+                            <asp:ListItem>1937</asp:ListItem>
+                            <asp:ListItem>1936</asp:ListItem>
+                            <asp:ListItem>1937</asp:ListItem>
+                            <asp:ListItem>1936</asp:ListItem>
+                            <asp:ListItem>1935</asp:ListItem>
+                            <asp:ListItem>1934</asp:ListItem>
+                            <asp:ListItem>1933</asp:ListItem>
+                            <asp:ListItem>1932</asp:ListItem>
+                            <asp:ListItem>1931</asp:ListItem>
+                            <asp:ListItem>1920</asp:ListItem>
+                            <asp:ListItem>1929</asp:ListItem>
+                            <asp:ListItem>1928</asp:ListItem>
+                            <asp:ListItem>1927</asp:ListItem>
+                            <asp:ListItem>1926</asp:ListItem>
+                            <asp:ListItem>1925</asp:ListItem>
+                            <asp:ListItem>1924</asp:ListItem>
+                            <asp:ListItem>1923</asp:ListItem>
+                            <asp:ListItem>1922</asp:ListItem>
+                            <asp:ListItem>1921</asp:ListItem>
+                            <asp:ListItem>1920</asp:ListItem>
+                        </asp:DropDownList>
+                        
+                        <label for="Country">Land:</label>
+                          <asp:DropDownList ID="DropDownListCountryR" runat="server" CssClass="dropdown">
+                            <asp:ListItem Value="Norway">Norge</asp:ListItem>
+                            <asp:ListItem Value="English">Utlandet</asp:ListItem>
+                          </asp:DropDownList>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/SaH-Sage/csgo.github.io/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/SaH-Sage/csgo.github.io/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+                        <label for="LanguagePref">Språk preferanse:</label>
+                          <asp:DropDownList ID="DropDownListBirtLanguageR" runat="server" CssClass="dropdown">
+                            <asp:ListItem Value="Norwegian">Norsk</asp:ListItem>
+                            <asp:ListItem Value="English">Engelsk</asp:ListItem>
+                          </asp:DropDownList>
+                      </div> 
+                      <div class="registration-info" style="margin-left:50%;">
+                        
+                        <label for="Sport">Idrett:</label>
+                          <asp:DropDownList ID="DropDownListSportR" runat="server" CssClass="dropdown">
+<asp:ListItem selected disabled hidden>-Velg idrett-</asp:ListItem>
+                <asp:ListItem>-Ingen idrett-</asp:ListItem>
+                <asp:ListItem>Aikido</asp:ListItem>
+                <asp:ListItem>Aking</asp:ListItem>
+                <asp:ListItem>Aking</asp:ListItem>
+                <asp:ListItem>Alpint</asp:ListItem>
+                <asp:ListItem>Amerikansk fotball</asp:ListItem>
+                <asp:ListItem>Australsk fotball</asp:ListItem>
+                <asp:ListItem>Badminton</asp:ListItem>
+                <asp:ListItem>Bakkeløp</asp:ListItem>
+                <asp:ListItem>Bandy</asp:ListItem>
+                <asp:ListItem>Baneskyting</asp:ListItem>
+                <asp:ListItem>Banesykling</asp:ListItem>
+                <asp:ListItem>Baseball</asp:ListItem>
+                <asp:ListItem>Basketball</asp:ListItem>
+                <asp:ListItem>Basse</asp:ListItem>
+                <asp:ListItem>Biljard</asp:ListItem>
+                <asp:ListItem>Bobsleigh</asp:ListItem>
+                <asp:ListItem>Boksing</asp:ListItem>
+                <asp:ListItem>Bordtennis</asp:ListItem>
+                <asp:ListItem>Bowling</asp:ListItem>
+                <asp:ListItem>Bryting</asp:ListItem>
+                <asp:ListItem>Bueskyting</asp:ListItem>
+                <asp:ListItem>Carambole</asp:ListItem>
+                <asp:ListItem>Casting</asp:ListItem>
+                <asp:ListItem>Cheerleading</asp:ListItem>
+                <asp:ListItem>Cricket</asp:ListItem>
+                <asp:ListItem>Curling</asp:ListItem>
+                <asp:ListItem>Dans</asp:ListItem>
+                <asp:ListItem>Dart</asp:ListItem>
+                <asp:ListItem>Dressur</asp:ListItem>
+                <asp:ListItem>Dykking</asp:ListItem>
+                <asp:ListItem>E-sport</asp:ListItem>
+                <asp:ListItem>Fallskjermhopping</asp:ListItem>
+                <asp:ListItem>Fekting</asp:ListItem>
+                <asp:ListItem>Formel 1</asp:ListItem>
+                <asp:ListItem>Fotball</asp:ListItem>
+                <asp:ListItem>Friidrett</asp:ListItem>
+                <asp:ListItem>Frisbee Guts</asp:ListItem>
+                <asp:ListItem>Frisbee Ultimate</asp:ListItem>
+                <asp:ListItem>Frisbeegolf</asp:ListItem>
+                <asp:ListItem>Futsal</asp:ListItem>
+                <asp:ListItem>Galopp</asp:ListItem>
+                <asp:ListItem>Golf</asp:ListItem>
+                <asp:ListItem>Gælisk fotball</asp:ListItem>
+                <asp:ListItem>Hapkido</asp:ListItem>
+                <asp:ListItem>Hundekjøring</asp:ListItem>
+                <asp:ListItem>Hundeveddeløp</asp:ListItem>
+                <asp:ListItem>Hurling</asp:ListItem>
+                <asp:ListItem>Håndbak</asp:ListItem>
+                <asp:ListItem>Håndball</asp:ListItem>
+                <asp:ListItem>Innebandy</asp:ListItem>
+                <asp:ListItem>Isdans</asp:ListItem>
+                <asp:ListItem>Ishockey</asp:ListItem>
+                <asp:ListItem>Judo</asp:ListItem>
+                <asp:ListItem>Jujutsu</asp:ListItem>
+                <asp:ListItem>Kappgang</asp:ListItem>
+                <asp:ListItem>Karate</asp:ListItem>
+                <asp:ListItem>Kickboksing</asp:ListItem>
+                <asp:ListItem>Klatring</asp:ListItem>
+                <asp:ListItem>Kombinert</asp:ListItem>
+                <asp:ListItem>Kulekjøring</asp:ListItem>
+                <asp:ListItem>Kunstløp</asp:ListItem>
+                <asp:ListItem>Lacrosse</asp:ListItem>
+                <asp:ListItem>Landhockey</asp:ListItem>
+                <asp:ListItem>Langrenn</asp:ListItem>
+                <asp:ListItem>Leirdueskyting</asp:ListItem>
+                <asp:ListItem>Motocross</asp:ListItem>
+                <asp:ListItem>Orientering</asp:ListItem>
+                <asp:ListItem>Padling</asp:ListItem>
+                <asp:ListItem>Paintball</asp:ListItem>
+                <asp:ListItem>Polo</asp:ListItem>
+                <asp:ListItem>Polocrosse</asp:ListItem>
+                <asp:ListItem>Rally</asp:ListItem>
+                <asp:ListItem>Rallycross</asp:ListItem>
+                <asp:ListItem>Reinkappkjøring</asp:ListItem>
+                <asp:ListItem>Roadracing</asp:ListItem>
+                <asp:ListItem>Roing</asp:ListItem>
+                <asp:ListItem>Rugby</asp:ListItem>
+                <asp:ListItem>Sandvolleyball</asp:ListItem>
+                <asp:ListItem>Seiling</asp:ListItem>
+                <asp:ListItem>Sjakk</asp:ListItem>
+                <asp:ListItem>Skeleton</asp:ListItem>
+                <asp:ListItem>Skihopping</asp:ListItem>
+                <asp:ListItem>Skiorientering</asp:ListItem>
+                <asp:ListItem>Skiskyting</asp:ListItem>
+                <asp:ListItem>Skotthyll</asp:ListItem>
+                <asp:ListItem>Skyting</asp:ListItem>
+                <asp:ListItem>Skøyteløp</asp:ListItem>
+                <asp:ListItem>Snooker</asp:ListItem>
+                <asp:ListItem>Snøbrett</asp:ListItem>
+                <asp:ListItem>Softball</asp:ListItem>
+                <asp:ListItem>Sprang</asp:ListItem>
+                <asp:ListItem>Sprangridning</asp:ListItem>
+                <asp:ListItem>Squash</asp:ListItem>
+                <asp:ListItem>Styrkeløft</asp:ListItem>
+                <asp:ListItem>Supermotard</asp:ListItem>
+                <asp:ListItem>Svømming</asp:ListItem>
+                <asp:ListItem>Sykling</asp:ListItem>
+                <asp:ListItem>Taekwondo</asp:ListItem>
+                <asp:ListItem>Tennis</asp:ListItem>
+                <asp:ListItem>Trampoline</asp:ListItem>
+                <asp:ListItem>Travsport</asp:ListItem>
+                <asp:ListItem>Trial</asp:ListItem>
+                <asp:ListItem>Triatlon</asp:ListItem>
+                <asp:ListItem>Truck racing</asp:ListItem>
+                <asp:ListItem>Turn</asp:ListItem>
+                <asp:ListItem>Tyrefekting</asp:ListItem>
+                <asp:ListItem>Vannpolo</asp:ListItem>
+                <asp:ListItem>Vannski</asp:ListItem>
+                <asp:ListItem>Vektløfting</asp:ListItem>
+                <asp:ListItem>Volleyball</asp:ListItem>
+                          </asp:DropDownList>
+
+                        <label for="Email">Epost: <i class="fa fa-question-circle" aria-hidden="true"></i></label>
+                        
+                        <asp:TextBox ID="TextBoxEmailR" class="shadow" runat="server" placeholder="Hvis lyst på nyhetsbrev, klikk på boksen"></asp:TextBox>              
+                        <div>
+                        <div class="iconVW"><input for="TermsOfServise" type="checkbox" /></div>
+                        </div>
+                        
+                        <label for="Password">Passord:</label>
+                        <asp:TextBox ID="TextBoxPasswordR" class="shadow" runat="server" placeholder="Passord" TextMode="Password"></asp:TextBox>
+                       
+                        <label for="PasswordConf">Gjenta passord:</label>
+                        <asp:TextBox ID="TextBoxPasswordConfR" OnTextChanged="TextBoxPasswordConfR_TextChanged" class="shadow" runat="server" placeholder="Passord må samsvare" TextMode="Password"></asp:TextBox>
+                       
+                        <label for="TermsOfServise">
+                          <a href="vilkårforbruk.aspx" class="white" target="_blank">Vilkår for bruk:</a>
+                          <asp:CheckBox ID="TermsOfServiseR" runat="server" CssClass="TermsOfService"></asp:CheckBox>
+                        </label>
+                        <p style="line-height:180%; float:right; text-align:left; width:67%; height:1em;">For å lage en bruker må du godta vilkår for bruk. (ved å huke av)</p>
+                        
+                        <label style="background-color:transparent;"></label>
+                        <label style="background-color:transparent;"></label>
+                        </div>
+                        <div class="W100" style="height:20vw; margin:21vw 0 0 0">
+                        <asp:Label ID="LabelErrorReg" runat="server" Text="" ForeColor="RED"></asp:Label>
+                        <asp:Button ID="ButtonRegister" OnClick="ButtonRegister_Click" runat="server" Text="Registrer" CssClass="RegisterButton"></asp:Button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <div class="right"><li>
+                        
+            <a class="a" href="hjem.aspx">Improvment</a></li><li>
+            <a class="b" href="Test.aspx">Youtubers</a></li><li>
+            <a class="c" href="Test2.aspx">Betting</a></li><li>
+            <a class="d"href="dagbøker.aspx">Givaways</a></li><li>
+            <a class="e"href="#about">Random</a></li><li class="spinn">
+            <a class="f fix"href="">&#128269;</a>
+              <ul>
+                <li><ul>
+                      <div class="login">
+                        <input type="text" name="search" placeholder="Forleløpig ikke implementert" />
+                        <input ID="TextBoxSearchButton" runat="server" type="submit" value="🔎" />
+                      </div>
+                    </ul> 
+                </li>
+              </ul>
+            </li><li>
+            <a class="content"href=""><i class="fa fa-bars" aria-hidden="true"></i>&nbsp;</a>
+              <ul>
+                <li><a href="Tom.aspx">Tom</a></li>
+                <li><a href="">Underside 2</a></li>
+                <li><a href="">Underside 3</a></li>
+              </ul>
+            </li>
+          </div>
+        </ul>
+    </nav>
 
     <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a id="welcome-to-github-pages-" class="anchor" href="#welcome-to-github-pages-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to GitHub Pages.# ###</h3>
+    <section class="bodey">
+        <div class="diary-section">
+            <div class="diary-section-content">
+                <span>
+                <label for="society" class="toggle diary-type">Society.gg</label>
+                  <input type="checkbox" id="society" class="hide" />
+                  <label for="society" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
+                        <h1 class="center-info"><a href="http://society.gg/#/bust?ref=5I4WqPDo8z" target="_blank">Society.gg</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="This is the referral/affiliate code.
+found under /recruits">Free credits: 5I4WqPDo8z</span></h2>
+                             <p><a href="http://society.gg/#/bust?ref=5I4WqPDo8z" target="_blank">Society.gg</a> probably has one of the most beutifull layouts. Here tere are several ways to get there curency "bananas", with faucets and trivias! </p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                               <li><i><span title="Named bust on this site">Crash</span></i></li>
+                               <li>Roulette <i><span title="A weel consisting of 54 slots.
+With a 2x, 3x, 5x, and 50x">Type A</span></i></li>
+                                <li>Coinflip</li>
+                                <li>Jackpot</li>
+                                <li>Treasure <i><span title="Not navigatable on the site,
+but if you type society.gg/#/treasure 
+you will get there">Where?</span></i></li>
+                                <li>Purtchessable Games</li>
+                              </ul> 
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$).</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span>
+                <span>
+                  <label for="csgoSpeed" class="toggle diary-type">CSGOSpeed</label>
+                  <input type="checkbox" id="csgoSpeed" class="hide" />
+                  <label for="csgoSpeed" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
+                        <h1 class="center-info"><a href="https://csgospeed.com/home" target="_blank">CSGOSpeed</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="This is the referral/affiliate code.
+found under /recruits">Free credits: 21CDCC21D7</span></h2>
+                             <p>Betting your free credits with a calm mind and outmost speculations, you can go from absolutely nothing to the very best knife!</p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                               <li>Jackpot</li>
+                               <li>Coinflip <i><span title="normal coinflip named russian conflip oni this site"></span> </i></li>
+                               <li>Roulette <i><span title="A weel consisting of 15 slots.
+With a 2x and a 14x multiplayer">Type B</span></i></li>
+                               <li>Blackjack</li>
+                               <li>Crash</li>
+                               <li>Match Betting</li>
+                               <li>Slot Machine</li>
+                               <li>Scratchy</li>
+                               <li>Safe Box</li>
+                               <li>Drag Race</li>
+                               <li>blender</li>
+                               <li><i><span title="Rock, paper & scissor">Heads Up</span></i></li>
+                               <li>Taxi</li>
+                              </ul>
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$). Start with coinflip</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span>
+                <span>
+                  <label for="csgoWheel" class="toggle diary-type">CSGoWheel</label>
+                  <input type="checkbox" id="csgoWheel" class="hide" />
+                  <label for="csgoWheel" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
+                        <h1 class="center-info"><a href="http://www.csgowheel.com/" target="_blank">CSGoWheel</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="This is the referral/affiliate code.
+found under /earn-coins">Free credits: csgoaddict</span></h2>
+                             <p>Betting your free credits with a calm mind and outmost speculations, you can go from absolutely nothing to the very best knife!</p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                               <li>Wheel <i><span title="A 16 tile wheel
+with 0x to 3x multiplayer.">Game</span></i></li>
+                               <li> <i><span title="A difrent variant of the chrash game.
+On this site it's called explode">Crash</span></i></li>
+                               <li>Bitcoin suport</li>
+                              </ul>
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$).</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span>
+                <span>
+                  <label for="csgoWitch" class="toggle diary-type">CSGO&nbsp;Witch</label>
+                  <input type="checkbox" id="csgoWitch" class="hide" />
+                  <label for="csgoWitch" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
+                        <h1 class="center-info"><a href="https://csgowitch.com" target="_blank">CSGO Witch</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="This is the referral/affiliate code.
+found under /user/affiliates">Free credits: csgoaddict</span></h2>
+                            <p>Betting your free credits with a calm mind and outmost speculations, you can go from absolutely nothing to the very best knife!</p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                               <li>Jackpot</li>
+                               <li>Coinflip <i><span title="normal coinflip named russian conflip oni this site"></span> </i></li>
+                               <li>Roulette <i><span title="A weel consisting of 15 slots.
+With a 2x and a 14x multiplayer">Type B</span></i></li>
+                               <li>Blackjack</li>
+                               <li>Crash</li>
+                               <li>Dice</li>
+                              </ul>
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$).</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span>
+                <span>
+                  <label for="csgoEmpier" class="toggle diary-type">CSGO&nbsp;Empire</label>
+                  <input type="checkbox" id="csgoEmpier" class="hide" />
+                  <label for="csgoEmpier" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
 
-<p>This is a test to see if it works</p>
+                        <h1 class="center-info"><a href="https://csgoempire.com/" target="_blank">CSGO EMPIRE</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="This is the referral/affiliate code.
+Found on free coins">Free credits: csgoaddict</span></h2>
+                             <p>Betting your free credits with a calm mind and outmost speculations, you can go from absolutely nothing to the very best knife!</p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                               <li>Roulette <i><span title="A weel consisting of 15 slots.
+With a 2x and a 14x">Type B</span></i></li>
+                               <li>Givavay</li>
+                              </ul> 
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$).</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span>
+                <span>
+                  <label for="csgotrinity" class="toggle diary-type">CSGO&nbsp;TRINITY</label>
+                  <input type="checkbox" id="csgotrinity" class="hide" />
+                  <label for="csgotrinity" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
+                        <h1 class="center-info"><a href="https://csgotrinity.com/" target="_blank">CSGO TRINITY</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="This is the referral/affiliate code.
+Found under /referrals">Free credits: csgoaddict</span></h2>
+                             <p>Betting your free credits with a calm mind and outmost speculations, you can go from absolutely nothing to the very best knife!</p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                               <li>Crash</li>
+                               <li>Roulette <i><span title="A weel consisting of 15 slots.
+With a 2x and a 14x multiplayer">Type B</span></i></li>
+                              </ul>
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$).</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span>
+                <span>
+                  <label for="csgoLabz" class="toggle diary-type">CSGO&nbsp;Labz</label>
+                  <input type="checkbox" id="csgoLabz" class="hide" />
+                  <label for="csgoLabz" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
 
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
+                        <h1 class="center-info"><a href="http://csgolabz.com/" target="_blank">CSGO LABZ</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="This is the referral/affiliate code.
+Found under free credits">Free credits: csgoaddict</span></h2>
+                             <p>Betting your free credits with a calm mind and outmost speculations, you can go from absolutely nothing to the very best knife!</p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                               <li>Roulette <i><span title="A weel consisting of 15 slots.
+With a 2x and a 14x multiplayer">Type B</span></i></li>
+                                <li><i><span title="A card is shown on the tabel,
+and you bet for it beeing higher or lower.">High-low </span></i></li>
+                                <li>Giveaway</li>
+                              </ul> 
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$).</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span>
+                <span>
+                  <label for="csgo500" class="toggle diary-type">CSGO&nbsp;500</label>
+                  <input type="checkbox" id="csgo500" class="hide" />
+                  <label for="csgo500" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
 
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
+                        <h1 class="center-info"><a href="https://csgo500.com/" target="_blank">SCGO 500</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="This is the referral/affiliate code.">Free credits: 21CDCC21D7</span></h2>
+                             <p>Daily rewards.<br/>Betting your free credits with a calm mind and outmost speculations, you can go from absolutely nothing to the very best knife! This site also gives your betting coins for doing small tasks.</p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                               <li>Roulette <i><span title="A weel consisting of 54 slots.
+With a 2x, 3x, 5x, and 50x">Type A</span></i></li>
+                                <li>Coinflip</li>
+                              </ul> 
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$).</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span> 
+                <span>
+                  <label for="skinUp" class="toggle diary-type">Skin&nbsp;Up</label>
+                  <input type="checkbox" id="skinUp" class="hide" />
+                  <label for="skinUp" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
+                        <h1 class="center-info"><a href="https://skinup.gg/" target="_blank">SkinUp</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="This is the referral/affiliate code.
+Found under /user/affiliates">Free credits: csgoaddict</span></h2>
+                             <p>Betting your free credits with a calm mind and outmost speculations, you can go from absolutely nothing to the very best knife!</p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                               <li>Roulette <i><span title="A weel consisting of 15 slots.
+With a 2x and a 14x multiplayer">Type B</span></i></li>
+                               <li>Crash</li>
+                               <li>Giveaways</li>
+                              </ul>
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$). This side does consistent giveaway</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span>
+                <span>
+                  <label for="csgostrong" class="toggle diary-type">CSGO&nbsp;Strong</label>
+                  <input type="checkbox" id="csgostrong" class="hide" />
+                  <label for="csgostrong" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
 
-<h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
+                        <h1 class="center-info"><a href="https://www.csgostrong.com/free-coins/?affiliate=csgoaddict" target="_blank">CSGO STRONG</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="This is the referral/affiliate code.
+Found on free coins">Free credits: csgoaddict</span></h2>
+                             <p>Betting your free credits with a calm mind and outmost speculations, you can go from absolutely nothing to the very best knife!</p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                               <li>Roulette <i><span title="A weel consisting of 15 slots.
+With a 2x and a 14x">Type B</span></i></li>
+                                <li>Coinflip</li>
+                               <li>Giveaway</li>
+                              </ul>
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$).</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span>
+                <span>                
+                  <label for="csgoLotto" class="toggle diary-type">CS:GO&nbsp;Lotto</label>
+                  <input type="checkbox" id="csgoLotto" class="hide" />
+                  <label for="csgoLotto" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
+                        <h1 class="center-info"><a href="http://www.csgoloto.com/" target="_blank">CS:GO lotto</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="This is the referral/affiliate code.">Free credits: csgoaddict</span></h2>
+                             <p>Free credits hourly and daily<br />Betting your free credits with a calm mind and outmost speculations, you can go from absolutely nothing to the very best knife!</p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                               <li>Roulette <i><span title="A weel consisting of 15 slots.
+With a 2x and a 14x">Type B</span></i></li>
+                                <li>Coinflip</li>
+                                <li>Free credits</li>
+                              </ul> 
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$).</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span> 
+                <span>                
+                  <label for="betsgg" class="toggle diary-type">Bets.gg</label>
+                  <input type="checkbox" id="betsgg" class="hide" />
+                  <label for="betsgg" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+                        <h1 class="center-info"><a href="https://bets.gg/" target="_blank">Bets.gg</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="This is the referral/affiliate code.
+Found on refer & earn">Free credits: csgoaddict</span></h2>
+                             <p>Several free credits daily<br />Betting your free credits with a calm mind and outmost speculations, you can go from absolutely nothing to the very best knife!</p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                               <li>Crash</li>
+                               <li>Dice</li>
+                               <li>Roulette <i><span title="A weel consisting of 15 slots.
+With a 2x and a 14x">Type B</span></i></li>
+                               <li><i><span title="You bet on actual matches">Match betting</span></i></li>
+                               <li>Coinflip</li>
+                               <li>Free credits</li>
+                               <li><i><span title="To outher users">Transfere coins</span></i></li>
+                              </ul> 
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$).</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span> 
+                <span>
+                  <label for="csgoBooth" class="toggle diary-type">CSGO&nbsp;Booth</label>
+                  <input type="checkbox" id="csgoBooth" class="hide" />
+                  <label for="csgoBooth" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
+                        <h1 class="center-info"><a href="http://csgobooth.com/" target="_blank">SCGO Booth</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="This is the referral/affiliate code.
+Found under /account.php">Free credits: csgoaddict</span></h2>
+                             <p>Betting your free credits with a calm mind and outmost speculations, you can go from absolutely nothing to the very best knife!</p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                               <li>Dice</li>
+                               <li>Roulette <i><span title="A weel consisting of 15 slots.
+With a 2x and a 14x">Type B</span></i></li>
+                                <li>Coinflip</li>
+                              </ul>
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$).</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span>
+                <span>
+                  <label for="csgoroyale" class="toggle diary-type">CSGO&nbsp;Royale</label>
+                  <input type="checkbox" id="csgoroyale" class="hide" />
+                  <label for="csgoroyale" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
+                        <h1 class="center-info"><a href="http://refer.csgoroyale.net/csgoaddict" target="_blank">CSGO Royale</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="This is the referral/affiliate code.
+Found on earn points">Free credits: csgoaddict</span></h2>
+                             <p>Betting your free credits with a calm mind and outmost speculations, you can go from absolutely nothing to the very best knife! this site also gives your betting coins for doing small tasks.</p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                               <li>Roulette <i><span title="A weel consisting of 54 slots.
+With a 2x, 3x, 5x, and 50x">Type A</span></i></li>
+                              <li>Roulette <i><span title="A weel consisting of 15 slots.
+With a 2x and a 14x multiplayer">Type B</span></i></li>
+                               <li>Roulette <i><span title="The same as actual rulette.
+Where you can bet in every aspect">Type C</span></i></li>
+                              </ul>
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$).</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span>
+                <span>
+                  <label for="csgoRoll" class="toggle diary-type">CSGO&nbsp;Roll</label>
+                  <input type="checkbox" id="csgoRoll" class="hide" />
+                  <label for="csgoRoll" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
 
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+                        <h1 class="center-info"><a href="http://www.csgoroll.com/" target="_blank">CSGO Roll</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="This is the referral/affiliate code.
+Found on the free coins! button">Free credits: csgoaddict</span></h2>
+                             <p>Betting your free credits with a calm mind and outmost speculations, you can go from absolutely nothing to the very best knife!</p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                               <li>Crash</li>
+                               <li>Roulette <i><span title="A weel consisting of 15 slots.
+With a 2x and a 14x">Type B</span></i></li>
+                                  <li><i><span title="Bet on what the dice will land on and get your money multiplyed">Dice</span></i></li>
+                                  <li>Giveaways at random</li>
+                              </ul>
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$).</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span> 
+                <span>
+                  <label for="csgoHandouts" class="toggle diary-type">CSGO&nbsp;Handouts</label>
+                  <input type="checkbox" id="csgoHandouts" class="hide" />
+                  <label for="csgoHandouts" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
+                        <h1 class="center-info"><a href="https://csgohandouts.com/?r=57f177db90376d0579c9095a" target="_blank">CSGO Handouts</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="You need to open the link again
+after loging ing with steam">Get free credits by open link again after login in.</span></h2>
+                             <p>Betting your free credits with a calm mind and outmost speculations, you can go from absolutely nothing to the very best knife!</p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                                  <li>Dice</li>
+                                  <li>Automatic dice</li>
+                                  <li>Jackpot Micro</li>
+                                  <li>Jackpot Tiny</li>
+                                  <li>Jackpot Smal</li>
+                                  <li>Jackpot Medium</li>
+                                  <li>Jackpot Large</li>
+                                  <li>Jackpot Huge</li>
+                              </ul>
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$). this side does consistent giveaway</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span>
+                <span>
+                  <label for="csgoBlackjack" class="toggle diary-type">CSGO&nbsp;BLACKJACK</label>
+                  <input type="checkbox" id="csgoBlackjack" class="hide" />
+                  <label for="csgoBlackjack" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
+                        <h1 class="center-info"><a href="https://csgoblackjack.com/?rf=J4BAUZBA" target="_blank">CSGO BLACKJACK</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="Click the ink again to be directet to the right plce.
+First time you have to log in with steam">Click the link again to get the credits</span></h2>
+                             <p>Betting your free credits with a calm mind and outmost speculations, you can go from absolutely nothing to the very best knife!</p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                                  <li>Blackjack</li>
+                                  <li>Giveaway</li>
+                              </ul>
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$). this side does consistent giveaway</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span>
+                <span>
+                  <label for="csgoBrawl" class="toggle diary-type">CSGO&nbsp;Brawl</label>
+                  <input type="checkbox" id="csgoBrawl" class="hide" />
+                  <label for="csgoBrawl" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
+                        <h1 class="center-info"><a href="https://csgobrawl.com/ref/CSGOADDICT" target="_blank">CSGO Brawl</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="Click the link again to make
+it posible to enter the code">Free credits: csgoaddict</span></h2>
+                             <p>Betting your free credits with a calm mind and outmoust speculations, you can go from absolutely nothing to the very best knife!</p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                               <li><i><span title="Named brawl on this site">Jackpot</span></i></li>
+                                <li>mini-Jackpot</li>
+                                  <li>Roulette <i><span title="A weel consisting of 15 slots.
+With a 2x and a 14x">Type B</span></i></li>
+                                <li><i><span title="Named minesweeper">Treasure?</span></i></li>
+                                  <li>Battleship</li>
+                              </ul>
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$).</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span>  
+                <span>
+                  <label for="csgoPolygon" class="toggle diary-type">CSGO&nbsp;Polygon</label>
+                  <input type="checkbox" id="csgoPolygon" class="hide" />
+                  <label for="csgoPolygon" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
 
-<p>You can @mention a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+                        <h1 class="center-info"><a href="http://csgopolygon.com/" target="_blank">CSGO Polygon</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="This is the referral/affiliate code.
+Found in the user menu --> Redeem code">Free credits: csgoaddict</span></h2>
+                             <p>Betting your free credits with a calm mind and outmost speculations, you can go from absolutely nothing to the very best knife!</p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                               <li>Roulette <i><span title="A weel consisting of 15 slots.
+With a 2x and a 14x">Type B</span></i></li>
+                              </ul>
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$). No tax on withdrawals, deposits and winnings.</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span>
+                <span>
+                  <label for="esportsCasino" class="toggle diary-type">Esports&nbsp;Casino</label>
+                  <input type="checkbox" id="esportsCasino" class="hide" />
+                  <label for="esportsCasino" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
 
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
+                        <h1 class="center-info"><a href="http://esportscasino.com/affiliate/code/005390" target="_blank">Esports Casino</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="You need to open the link again
+after loging ing with steam">Free credits: 005390 (open link again)</span></h2>
+                             <p>Betting your free credits with a calm mind and outmost speculations, you can go from absolutely nothing to the very best knife!</p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                               <li>Casino
+                                  <ul>
+                                      <li>14 difrent types.</li>
+                                  </ul></li>
+                               <li>Betting <i><span title="You bet on actual matches">Matches</span></i></li>
+                               <li>Jackpot</li>
+                               <li>Coinflip</li>
+                               <li>Roulette <i><span title="A weel consisting of 15 slots.
+With a 2x and a 14x multiplayer">Type B</span></i></li>
+                               <li>Raffle</li>
+                               <li>Giveaway</li>
+                              </ul>
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$).</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span>
+                <span>
+                  <label for="csgox14" class="toggle diary-type">CSGO&nbsp;X14</label>
+                  <input type="checkbox" id="csgox14" class="hide" />
+                  <label for="csgox14" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
 
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
+                        <h1 class="center-info"><a href="http://csgox14.com/" target="_blank">CSGO X14</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="This is the referral/affiliate code.
+Found on free coins">Free credits: csgoaddict</span></h2>
+                             <p>Betting your free credits with a calm mind and outmost speculations, you can go from absolutely nothing to the very best knife!</p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                               <li>Roulette <i><span title="A weel consisting of 15 slots.
+With a 2x and a 14x multiplayer">Type B</span></i></li>
+                               <li>Coinflip</li>
+                               <li>Dice</li>
+                              </ul>
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$). E-mail confirmation needed on this site.</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span>
+                <span>
+                  <label for="csgoworld" class="toggle diary-type">Csgoworld</label>
+                  <input type="checkbox" id="csgoworld" class="hide" />
+                  <label for="csgoworld" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
+                        <h1 class="center-info"><a href="http://csgoworld.com/#/" target="_blank">Csgoworld</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="This is the referral/affiliate code.
+Found on the free coins button">Free credits: csgoaddict</span></h2>
+                             <p>Betting your free credits with a calm mind and outmost speculations, you can go from absolutely nothing to the very best knife!</p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                               <li>Crash</li>
+                               <li>Coinflip</li>
+                               <li>Roulette <i><span title="A weel consisting of 15 slots.
+With a 2x and a 14x multiplayer">Type B</span></i></li>
+                              </ul>
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$).</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span>
+                <span>
+                  <label for="imbahase" class="toggle diary-type">Imbahase</label>
+                  <input type="checkbox" id="imbahase" class="hide" />
+                  <label for="imbahase" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
+                        <h1 class="center-info"><a href="https://imbahase.com/?c=tc146752" target="_blank">Imbahase</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="You need to open the link again
+after loging ing with steam">Free credits: tc146752 (open link again)</span></h2>
+                             <p>Betting your free credits with a calm mind and outmost speculations, you can go from absolutely nothing to the very best knife!</p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                               <li>Betting <i><span title="You bet on actual matches">Matches</span></i></li>
+                               <li>Roulette <i><span title="A weel consisting of 54 slots.
+With a 2x, 3x, 5x, and 50x">Type A</span></i></li>
+                               <li>Case keys</li>
+                               <li><i><span title="A jackpot with low value items">Junk Pot</span></i></li>
+                               <li>Trades</li>
+                               <li>Task for kredit</li>
+                              </ul>
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$).</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span>
+                <span>
+                  <label for="drakeMoon" class="toggle diary-type">DrakeMoon*</label>
+                  <input type="checkbox" id="drakeMoon" class="hide" />
+                  <label for="drakeMoon" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
+                        <h1 class="center-info"><a href="https://www.drakemoon.com/promo-code/977758" target="_blank">DRAKEMOON</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="This is the referral/affiliate code.
+Found on promo-code">Free credits: csgoaddict</span></h2>
+                             <p>Betting your free credits with a calm mind and outmost speculations, you can go from absolutely nothing to the very best knife!</p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                               <li> this site only does caseopenings</li>
+                              </ul>
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$). Drakemoon does caseopenings that will often lead to you sitting with skins worth lot more than if you did a caseopening in CSGO. they make cases based on what the consumer wants.</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span>
+                <span>
+                  <label for="csgomax" class="toggle diary-type">CSGOMAX</label>
+                  <input type="checkbox" id="csgomax" class="hide" />
+                  <label for="csgomax" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
+                        <h1 class="center-info"><a href="http://csgomax.net/" target="_blank">CSGOMAX</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="This is the referral/affiliate code.
+Found under /referal">Free credits: csgoaddict</span></h2>
+                             <p>Betting your free credits with a calm mind and outmost speculations, you can go from absolutely nothing to the very best knife!</p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                               <li>Jackpot
+                                 <ul>
+                                   <li>Clasic</li>
+                                   <li>Roulette <i><span title="A weel consisting of 54 slots.
+With a 2x, 3x, 5x, and 50x">Type A</span></i></li>
+                                 </ul>
+                               </li>
+                              </ul>
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$). Drakemoon does caseopenings that will often lead to you sitting with skins worth lot more than if you did a caseopening in CSGO. they make cases based on what the consumer wants.</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span>
+                <span>
+                  <label for="csgoChance" class="toggle diary-type">CSGO&nbsp;Chance</label>
+                  <input type="checkbox" id="csgoChance" class="hide" />
+                  <label for="csgoChance" class="overlay-left-o"></label>
+                  <div class="overlay-content-left-o h80">
+                    <div class="diary-section-other" style="padding-top:0vw; width:100%;">
+                        <h1 class="center-info"><a href="http://www.csgochance.com/?ref=csgoaddict" target="_blank">CSGO Chance</a></h1><br />
+                        <div class="content-info content-info-3">
+                            <h2><span title="This is the referral/affiliate code.
+Found on the promo code button">Free credits: csgoaddict</span></h2>
+                             <p>Betting your free credits with a calm mind and outmost speculations, you can go from absolutely nothing to the very best knife! this site also gives your betting coins for doing small tasks.</p>
+                        </div>
+                        <div class="content-info content-info-3">
+                            <h2>Betting types</h2>
+                            <div class="list">
+                              <ul>
+                              <li>jackpot</li>
+                              <li>Roulette <i><span title="A weel consisting of 15 slots.
+With a 2x and a 14x multiplayer">Type B</span></i></li>
+                              <li>TeamUP <i><span title="a special gamemode where two teams go up against eachother, and the winner takes it all"></span> </i></li>
+                              <li>coinflip</li>
+                              </ul>
+                            </div>
+                        </div>
+                        <div class="content-info content-info-3 media-left">
+                            <h2>Usage</h2>
+                             <p>Login with your steam ID on the site. For withdraw a minimum deposit has to be required (0.1$ - 0.5$).</p>
+                        </div>
+                        <div class="barrier"></div>
+                    </div>
+                   </div>
+                </span>
+
+            </div>
+        </div>
+        <div class="diary-section-other">
+
+            <h1 class="center-info">CS:GO betting sites</h1><br />
+        <div class="content-info content-info-3">
+          <h2>Free skins? <i class="fa fa-line-chart" style="color:green;" aria-hidden="true"></i>
+</h2>
+            <p>As every CS player you want skins, and by betting you can potentialy get lots of free skins! 99% luck ans 1% pure skill.</p>
+        </div>
+        <div class="content-info content-info-3">
+          <h2>Noe du vil skrive om</h2>
+            <p>Tekst</p>
+         </div>
+        <div class="content-info content-info-3 media-left">
+          <h2>Noe du vil skrive om</h2>
+            <p>Tekst</p>
+         </div>
+         <div class="barrier"></div>
+
+        </div>
+</section>
+    
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
