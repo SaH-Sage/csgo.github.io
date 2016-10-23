@@ -129,7 +129,7 @@ div label.overlay-top-right,div label.overlay-bottom-left {
     background:Gray;            z-index:10;         cursor:pointer;}
 label.overlay-left-o {
     position:absolute;          display:block;      width:79.75%;                 height:100%;
-    background:#fff;            z-index:1;          cursor:pointer;}
+    background:#fff;            z-index:2;          cursor:pointer;}
 div label.overlay-top   {top:-130%;}
 div label.overlay-right {right:-110%; top:0;}   
 div label.overlay-bottom{bottom:-110%;left:0;}
@@ -143,7 +143,7 @@ div div.overlay-content-bottom,div div.overlay-content-left {
     z-index:11;                 cursor:default}
 div.overlay-content-left-o {
     position:fixed;             display:block;              width:79.75%;               background:#fff;                               overflow-y:auto;
-    z-index:1;                  cursor:default}
+    z-index:2;                  cursor:default}
 div div.overlay-content-top    {left:0;                     top:-120%;}
 div div.overlay-content-right  {right:-110%;                top:10%;}
 div div.overlay-content-bottom {left:0;                     bottom:-120%;}
