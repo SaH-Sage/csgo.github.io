@@ -17,7 +17,72 @@
 </style>
   <body>
 
-     <section class="bodey">
+    <!-- HEADER -->
+    <nav class="menu">
+        <ul>
+          <li class="left"><a class="welcome" href="#home"><label ID="LabelWelcome" onclick="LabelWelcome_Click" runat="server"><i class="fa fa-user" aria-hidden="true"></i> Login/registrer </label></a>
+            <ul>
+              <li><div class="login">
+                <asp:TextBox id="InputTextEmailL" CssClass="login" placeholder="Epost adresse" runat="server" TextMode="Email"></asp:TextBox>
+                <div class="icon"><i class="fa fa-envelope-o fa-fw"></i></div></div>
+              </li>
+              <li><div class="login">
+                <asp:TextBox id="InputPasswordL" Cssclass="login" placeholder="Passord" runat="server" TextMode="Password"></asp:TextBox>
+                <div class="icon"><i class="fa fa-key fa-fw"></i></div></div>
+              </li>
+              <li>
+                <label for="registration" class="lable-error">Husk meg:</label>
+                <input id="Checkbox1" type="checkbox" />
+                <asp:Label ID="LabelErrorL" runat="server" Cssclass="lable-error" ForeColor="Red"></asp:Label>
+              </li>
+              <li> 
+                <asp:Button id="InputSubmitLogin" OnClick="InputSubmitLogin_Click" runat="server" Text="Logg in" class="login button-clean" style="width:70px; margin-right:10px;"></asp:Button>
+                <label for="registration" class="toggle">Ingen konto? Register!</label>
+                <div>
+                  <input type="checkbox" id="registration" class="hide" />
+                  <label for="registration" class="overlay-top"></label>
+                  <div class="overlay-content-top">
+                    <div class="registration">
+                      <h2>Registrer kontoen din</h2> 
+                      <div class="registration-info">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <div class="right"><li>
+                        
+            <a class="a" href="hjem.aspx">Improvment</a></li><li>
+            <a class="b" href="Test.aspx">Youtubers</a></li><li>
+            <a class="c" href="Test2.aspx">Betting</a></li><li>
+            <a class="d"href="dagbøker.aspx">Givaways</a></li><li>
+            <a class="e"href="#about">Random</a></li><li class="spinn">
+            <a class="f fix"href="">&#128269;</a>
+              <ul>
+                <li><ul>
+                      <div class="login">
+                        <input type="text" name="search" placeholder="Forleløpig ikke implementert" />
+                        <input ID="TextBoxSearchButton" runat="server" type="submit" value="🔎" />
+                      </div>
+                    </ul> 
+                </li>
+              </ul>
+            </li><li>
+            <a class="content"href=""><i class="fa fa-bars" aria-hidden="true"></i>&nbsp;</a>
+              <ul>
+                <li><a href="Tom.aspx">Tom</a></li>
+                <li><a href="">Underside 2</a></li>
+                <li><a href="">Underside 3</a></li>
+              </ul>
+            </li>
+          </div>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+   <section class="bodey">
                 <span>
                   <input type="checkbox" id="society" class="hide" />
                   <label for="society" class="overlay-left-o"></label>
@@ -949,5 +1014,17 @@ With a 2x and a 14x multiplayer">Type B</span></i></li>
 
         </div>
 </section>
+    
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Csgo.GitHub.io maintained by <a href="https://github.com/SaH-Sage">SaH-Sage</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
   </body>
 </html>
