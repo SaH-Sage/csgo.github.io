@@ -1,27 +1,3 @@
-
-h2 {
-  padding-bottom: 10px;
-  background: url('../images/bg_hr.png') repeat-x bottom;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 body {font-family:Calibri; height:2500px; font-size:17px} /* Googl fonts*/
 *{padding:0; 
 -webkit-box-sizing:border-box;
@@ -34,14 +10,18 @@ body {font-family:Calibri; height:2500px; font-size:17px} /* Googl fonts*/
     margin-top: 0;
     list-style-type:none;
 } 
-a {  text-decoration: none;    color: #007edf;}
-
-
+a { text-decoration: none;    color: #007edf;}
+a:hover { color: deepskyblue; }​
+section a:visited { color: #551a8b; }
+/*h2 {
+  padding-bottom: 12px;
+  background: url('../../images/dottet.png') repeat-x bottom;}*/
+section a:visited { color: #551a8b; }
 
 /**==================== Menu ====================* OAT, Outdore Activity and or Training   */
 
 nav.menu  {
-    position: fixed;            width: 100%;                font-family:calibri;        background-color: rgba(77,0,38,0.7);                               z-index:3;                  top:0;
+    position: fixed;            width: 100%;                font-family:calibri;        background-color:#22314E/*rgba(77,0,38,0.7)*/;                               z-index:3;                  top:0;
     font-size: 22px;            list-style-type: none;      z-index:3;                  top:0;
     list-style-type:none;}
 nav.menu ul div.right   {float: right;}
@@ -148,7 +128,7 @@ div div.overlay-content-top    {left:0;                     top:-120%;}
 div div.overlay-content-right  {right:-110%;                top:10%;}
 div div.overlay-content-bottom {left:0;                     bottom:-120%;}
 div div.overlay-content-left,
-div.overlay-content-left-o     {left:-110%;                 top:9%;}
+div.overlay-content-left-o     {left:-110%;                 top:8.6%;}
 div input[type=checkbox].hide:checked ~ label.overlay-top,      
 div input[type=checkbox].hide:checked ~ label.overlay-right,    
 div input[type=checkbox].hide:checked ~ label.overlay-bottom,   
@@ -160,7 +140,7 @@ div input[type=checkbox].hide:checked ~ div.overlay-content-top   {top:10%;}
 div input[type=checkbox].hide:checked ~ div.overlay-content-right {right:0;}
 div input[type=checkbox].hide:checked ~ div.overlay-content-bottom{bottom:10%;}
 div input[type=checkbox].hide:checked ~ div.overlay-content-left  {left:0;}
-div input[type=checkbox].hide:checked ~ div.overlay-content-left-o{left:20vw;top:9%;}
+div input[type=checkbox].hide:checked ~ div.overlay-content-left-o{left:20vw;top:8.6%;}
 div input[type=checkbox].hide:checked ~ label.overlay-top:before,
 div input[type=checkbox].hide:checked ~ label.overlay-right:before,
 div input[type=checkbox].hide:checked ~ label.overlay-bottom:before,
@@ -409,14 +389,12 @@ div.list li,div.list ul {       list-style-type:disc;    margin-left:10px;    pa
 div.list li li,div.list ul ul {
     list-style-type:circle;}
     
-
         /**================ Kollonner ================**/
 .white {color:white}
 div.barrier { 
     width:100%;                 height:4vw;         margin:0vw 0;             clear:both;
     background-color:black;
 }
-h2{padding-bottom:8px;}
 h1.center-info {
     font-size:3em;              font-family :Arial; max-width: 11em;            border-bottom: 0.1em solid black;  
     margin:0.8em auto;          text-align:center;  padding-top:0.5em;          margin-top:0;
@@ -470,8 +448,12 @@ label.diary-type {
     margin:20px 0px 20px 0;     line-height:42px;       overflow-x:hidden;
 }
 div.diary-section-other{
-    width:79.8%;                cursor:default;         top:0;                  z-index:0;
-    display:inline-block;       position:absolute;      padding-top:4vw;        right:0;}
+    width:79.8%;                cursor:default;         top:0;                  z-index:1;
+    display:inline-block;       position:absolute;      padding-top:4vw;        right:0;
+    background:transparent;     color:#FFA200;          font-weight:800;        text-shadow: 1px 2px 0.5px #22314E;
+    text-shadow: -1px 0  0.4px #22314E, 0 1px 0.4px #22314E, 1px 0 0.4px #22314E, 0 -1px 0.4px #22314E;
+    font-size:19px;
+}div.diary-section-other h1,div.diary-section-other h2{text-shadow: 1px 2px 0.5px #22314E;}
 
 .multiLine {
     float: left;                margin:0.11vw 0 0.5vw 0%;   width:100%; padding:0.6vw 0.3vw 0.2vw 0.6vw;
@@ -480,7 +462,8 @@ div.diary-section-other{
 
 
 /**==================== Standarer ====================**/
-
+img.img {width:60%; margin:3.4vh 0 0 30%; z-index:0; position:absolute;}
+iframe.youtube {width:100%; height:95vh;}
 .h10 {height:10%;}
 .h20 {height:20%;}
 .h30 {height:30%;}
@@ -591,5 +574,6 @@ input:checked + label:before {
 }
    */
     
+
     
     
