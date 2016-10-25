@@ -17,6 +17,7 @@ section a:visited { color: #551a8b; }
   padding-bottom: 12px;
   background: url('../../images/dottet.png') repeat-x bottom;}*/
 section a:visited { color: #551a8b; }
+span:hover {cursor:pointer;}
 
 /**==================== Menu ====================* OAT, Outdore Activity and or Training   */
 
@@ -129,6 +130,7 @@ div div.overlay-content-right  {right:-110%;                top:10%;}
 div div.overlay-content-bottom {left:0;                     bottom:-120%;}
 div div.overlay-content-left,
 div.overlay-content-left-o     {left:-110%;                 top:8.6%;}
+div.overlay-content-left-o  p,div.overlay-content-left-o ul {text-shadow:none;}
 div input[type=checkbox].hide:checked ~ label.overlay-top,      
 div input[type=checkbox].hide:checked ~ label.overlay-right,    
 div input[type=checkbox].hide:checked ~ label.overlay-bottom,   
@@ -381,7 +383,7 @@ div.slideshow .h:checked ~ .labels > .h {background:orange;}
 
 section.bodey,section.bodey-home {
     width: 100%;                height:2500px;              background-color:#fff;      z-index:0;
-    Background: linear-gradient(0deg, white);               Background: -webkit-linear-gradient(0deg, white);}
+    Background: linear-gradient(0deg, white);               Background:-webkit-linear-gradient(90deg, #222,#000);}
 section.bodey-home{ margin-top:49vw;}
 section.bodey{margin-top:0vw;}
 
@@ -391,6 +393,18 @@ div.list li li,div.list ul ul {
     
         /**================ Kollonner ================**/
 .white {color:white}
+p.bett {
+    text-align:center;          color:#fff;         font-size:22px;         padding:0.2em; 
+    border-bottom:2px solid white;}
+p.circle{
+    width:30px;                 height: 30px;       text-align:center;      margin:5px 0 5px 0;
+    color:#fff;                 font-size:18px;     border:2px solid white; border-radius: 50%;
+    margin-left:calc(50% - 14px);}
+p.circle-grade{
+    width:26px;                 height: 26px;       text-align:center;      margin:-34px 0 0 84%;
+    color:#fff;                 font-size:16px;     border:2px solid #FFA200;border-radius: 50%;
+    position:absolute;}
+
 div.barrier { 
     width:100%;                 height:4vw;         margin:0vw 0;             clear:both;
     background-color:black;
@@ -452,8 +466,9 @@ div.diary-section-other{
     display:inline-block;       position:absolute;      padding-top:4vw;        right:0;
     background:transparent;     color:#FFA200;          font-weight:800;        text-shadow: 1px 2px 0.5px #22314E;
     text-shadow: -1px 0  0.4px #22314E, 0 1px 0.4px #22314E, 1px 0 0.4px #22314E, 0 -1px 0.4px #22314E;
-    font-size:19px;
-}div.diary-section-other h1,div.diary-section-other h2{text-shadow: 1px 2px 0.5px #22314E;}
+    font-size:19px;}
+/*div.diary-section-other p {background:rgba(0,0,0,0,0.4)}*/
+div.diary-section-other h1,div.diary-section-other h2{text-shadow: 1px 2px 0.5px #22314E;}
 
 .multiLine {
     float: left;                margin:0.11vw 0 0.5vw 0%;   width:100%; padding:0.6vw 0.3vw 0.2vw 0.6vw;
@@ -462,8 +477,12 @@ div.diary-section-other{
 
 
 /**==================== Standarer ====================**/
-img.img {width:60%; margin:3.4vh 0 0 30%; z-index:0; position:absolute;}
-iframe.youtube {width:100%; height:95vh;}
+img.img {width:81.4%; height:405px;margin:0 0 0 18.6%; z-index:0; position:absolute;}
+iframe.youtube {width:100%; height:95vh; margin-top:20px;}
+
+.right {float:right;}
+.left {float:left;}
+
 .h10 {height:10%;}
 .h20 {height:20%;}
 .h30 {height:30%;}
