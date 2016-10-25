@@ -10,14 +10,22 @@ body {font-family:Calibri; height:2500px; font-size:17px} /* Googl fonts*/
     margin-top: 0;
     list-style-type:none;
 } 
-a { text-decoration: none;    color: #007edf;}
+
+a {color:white; text-decoration:solid underline;}
+a:hover {color:#999; text-decoration:dotted underline;}
+section p a:hover{color:#999; text-decoration:dotted underline;}
+section h1 a{color:#FFA200; text-decoration:solid underline;}
+section h1 a:hover{color:#999; text-decoration:solid underline;}
+a:visited{color:#999;}
+/*ha { text-decoration: none;    color: #007edf;}
 a:hover { color: deepskyblue; }​
 section a:visited { color: #551a8b; }
-/*h2 {
+/2 {
   padding-bottom: 12px;
-  background: url('../../images/dottet.png') repeat-x bottom;}*/
+  background: url('../../images/dottet.png') repeat-x bottom;}
 section a:visited { color: #551a8b; }
-span:hover {cursor:pointer;}
+span:hover {cursor:pointer;}*/
+
 
 /**==================== Menu ====================* OAT, Outdore Activity and or Training   */
 
@@ -109,27 +117,27 @@ div label.overlay-top-right,div label.overlay-bottom-left {
     position:fixed;             display:block;      width:100%;                 height:100%;
     background:Gray;            z-index:10;         cursor:pointer;}
 label.overlay-left-o {
-    position:absolute;          display:block;      width:79.75%;                 height:100%;
+    position:fixed;          display:block;      width:79.75%;                 height:100%;
     background:#fff;            z-index:2;          cursor:pointer;}
 div label.overlay-top   {top:-130%;}
 div label.overlay-right {right:-110%; top:0;}   
 div label.overlay-bottom{bottom:-110%;left:0;}
 div label.overlay-left  {left:-110%;  top:0;}
-div label.overlay-left-o{left:-110%;  top:10%;}
+div label.overlay-left-o{left:-110%;  top:7.7%;}
 div label.overlay-bottom-left{left:-110%;  bottom:-110%;}
 div label.overlay-top-right{right:-110%;  top:-110%;}
 div div.overlay-content-top,div div.overlay-content-right,
 div div.overlay-content-bottom,div div.overlay-content-left {
-    position:fixed;             display:block;              width:100%;                 background:#333;                               overflow-y:auto;
+    position:fixed;             display:block;              width:100%;                 background:white;                               overflow-y:auto;
     z-index:11;                 cursor:default}
 div.overlay-content-left-o {
-    position:fixed;             display:block;              width:79.75%;               background:#fff;                               overflow-y:auto;
+    position:fixed;             display:block;              width:79.75%;               background:#222;                               overflow-y:auto;
     z-index:2;                  cursor:default}
 div div.overlay-content-top    {left:0;                     top:-120%;}
 div div.overlay-content-right  {right:-110%;                top:10%;}
 div div.overlay-content-bottom {left:0;                     bottom:-120%;}
 div div.overlay-content-left,
-div.overlay-content-left-o     {left:-110%;                 top:8.6%;}
+div.overlay-content-left-o     {left:-110%;                 top:7.7%;}
 div.overlay-content-left-o  p,div.overlay-content-left-o ul {text-shadow:none;}
 div input[type=checkbox].hide:checked ~ label.overlay-top,      
 div input[type=checkbox].hide:checked ~ label.overlay-right,    
@@ -137,12 +145,12 @@ div input[type=checkbox].hide:checked ~ label.overlay-bottom,
 div input[type=checkbox].hide:checked ~ label.overlay-left,
 div input[type=checkbox].hide:checked ~ label.overlay-bottom-left,
 div input[type=checkbox].hide:checked ~ label.overlay-top-right   {top:0;right:0;bottom:0;left:0; }
-div input[type=checkbox].hide:checked ~ label.overlay-left-o      {left:20vw;  top:10%;}
+div input[type=checkbox].hide:checked ~ label.overlay-left-o      {left:20vw;  top:7.7%;}
 div input[type=checkbox].hide:checked ~ div.overlay-content-top   {top:10%;}
 div input[type=checkbox].hide:checked ~ div.overlay-content-right {right:0;}
 div input[type=checkbox].hide:checked ~ div.overlay-content-bottom{bottom:10%;}
 div input[type=checkbox].hide:checked ~ div.overlay-content-left  {left:0;}
-div input[type=checkbox].hide:checked ~ div.overlay-content-left-o{left:20vw;top:8.6%;}
+div input[type=checkbox].hide:checked ~ div.overlay-content-left-o{left:20vw;top:7.7%;}
 div input[type=checkbox].hide:checked ~ label.overlay-top:before,
 div input[type=checkbox].hide:checked ~ label.overlay-right:before,
 div input[type=checkbox].hide:checked ~ label.overlay-bottom:before,
@@ -401,13 +409,13 @@ p.circle{
     color:#fff;                 font-size:18px;     border:2px solid white; border-radius: 50%;
     margin-left:calc(50% - 14px);}
 p.circle-grade{
-    width:26px;                 height: 26px;       text-align:center;      margin:-34px 0 0 84%;
-    color:#fff;                 font-size:16px;     border:2px solid #FFA200;border-radius: 50%;
+    width:25px;                 height: 25px;       text-align:center;      margin:-34px 0 0 84%;
+    color:#fff;                 font-size:16px;     border:2px solid gold;border-radius: 50%;
     position:absolute;}
 
 div.barrier { 
     width:100%;                 height:4vw;         margin:0vw 0;             clear:both;
-    background-color:black;
+    background-color:#FFA200;
 }
 h1.center-info {
     font-size:3em;              font-family :Arial; max-width: 11em;            border-bottom: 0.1em solid black;  
