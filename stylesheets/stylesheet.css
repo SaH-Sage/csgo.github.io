@@ -105,11 +105,11 @@ div label.overlay-top,div label.overlay-right,
 div label.overlay-bottom,div label.overlay-left,
 div div.overlay-content-left-o,div label.overlay-left-o,
 div label.overlay-top-right,div label.overlay-bottom-left{
-        transition: 350ms ease;
-     -o-transition: 350ms ease;
-    -ms-transition: 350ms ease;
-   -moz-transition: 350ms ease;
--webkit-transition: 350ms ease;}
+        transition: 512ms ease-in-out;
+     -o-transition: 512ms ease-in-out;
+    -ms-transition: 512ms ease-in-out;
+   -moz-transition: 512ms ease-in-out;
+-webkit-transition: 512ms ease-in-out;}
 
 div label.overlay-top,div label.overlay-right,
 div label.overlay-bottom,div label.overlay-left,
@@ -118,46 +118,48 @@ div label.overlay-top-right,div label.overlay-bottom-left {
     background:Gray;            z-index:10;         cursor:pointer;}
 label.overlay-left-o {
     position:fixed;          display:block;      width:79.75%;                 height:100%;
-    background:#fff;            z-index:2;          cursor:pointer;}
+    background:#fff;         z-index:2;          cursor:pointer;}
 div label.overlay-top   {top:-130%;}
 div label.overlay-right {right:-110%; top:0;}   
 div label.overlay-bottom{bottom:-110%;left:0;}
 div label.overlay-left  {left:-110%;  top:0;}
-div label.overlay-left-o{left:-110%;  top:7.7%;}
+div label.overlay-left-o{left:-180%;  top:7.7%;}
 div label.overlay-bottom-left{left:-110%;  bottom:-110%;}
 div label.overlay-top-right{right:-110%;  top:-110%;}
 div div.overlay-content-top,div div.overlay-content-right,
 div div.overlay-content-bottom,div div.overlay-content-left {
-    position:fixed;             display:block;              width:100%;                 background:white;                               overflow-y:auto;
+    position:fixed;             display:block;              width:100%;                 background:#333;                               overflow-y:auto;
     z-index:11;                 cursor:default}
 div.overlay-content-left-o {
     position:fixed;             display:block;              width:79.75%;               background:#222;                               overflow-y:auto;
     z-index:2;                  cursor:default}
+div.overlay-content-left-o p,div.overlay-content-left-o h2,div.overlay-content-left-o ul {color:#fff;}
 div div.overlay-content-top    {left:0;                     top:-120%;}
 div div.overlay-content-right  {right:-110%;                top:10%;}
 div div.overlay-content-bottom {left:0;                     bottom:-120%;}
-div div.overlay-content-left,
-div.overlay-content-left-o     {left:-110%;                 top:7.7%;}
+div div.overlay-content-left   {left:-110%;                 top:10%;}
+div.overlay-content-left-o     {left:-180%;                 top:7.7%;}
 div.overlay-content-left-o  p,div.overlay-content-left-o ul {text-shadow:none;}
-div input[type=checkbox].hide:checked ~ label.overlay-top,      
-div input[type=checkbox].hide:checked ~ label.overlay-right,    
-div input[type=checkbox].hide:checked ~ label.overlay-bottom,   
-div input[type=checkbox].hide:checked ~ label.overlay-left,
-div input[type=checkbox].hide:checked ~ label.overlay-bottom-left,
-div input[type=checkbox].hide:checked ~ label.overlay-top-right   {top:0;right:0;bottom:0;left:0; }
-div input[type=checkbox].hide:checked ~ label.overlay-left-o      {left:20vw;  top:7.7%;}
-div input[type=checkbox].hide:checked ~ div.overlay-content-top   {top:10%;}
-div input[type=checkbox].hide:checked ~ div.overlay-content-right {right:0;}
-div input[type=checkbox].hide:checked ~ div.overlay-content-bottom{bottom:10%;}
-div input[type=checkbox].hide:checked ~ div.overlay-content-left  {left:0;}
-div input[type=checkbox].hide:checked ~ div.overlay-content-left-o{left:20vw;top:7.7%;}
-div input[type=checkbox].hide:checked ~ label.overlay-top:before,
-div input[type=checkbox].hide:checked ~ label.overlay-right:before,
-div input[type=checkbox].hide:checked ~ label.overlay-bottom:before,
-div input[type=checkbox].hide:checked ~ label.overlay-left:before,
-div input[type=checkbox].hide:checked ~ label.overlay-left-o:before,
-div input[type=checkbox].hide:checked ~ label.overlay-bottom-left:before,
-div input[type=checkbox].hide:checked ~ label.overlay-top-right:before{
+div input.hide:checked ~ label.overlay-top,      
+div input.hide:checked ~ label.overlay-right,    
+div input.hide:checked ~ label.overlay-bottom,   
+div input.hide:checked ~ label.overlay-left,
+div input.hide:checked ~ label.overlay-bottom-left,
+div input.hide:checked ~ label.overlay-top-right   {top:0;right:0;bottom:0;left:0; }
+div input.hide:checked ~ label.overlay-left-o      {left:20vw;  top:7.7%;}
+div input.hide:checked ~ div.overlay-content-top   {top:10%;}
+div input.hide:checked ~ div.overlay-content-right {right:0;}
+div input.hide:checked ~ div.overlay-content-bottom{bottom:10%;}
+div input.hide:checked ~ div.overlay-content-left  {left:0;}
+div input.hide:checked ~ div.overlay-content-left-o{left:20vw;top:7.7%;}
+div input.hide:checked ~ label.overlay-top:before,
+div input.hide:checked ~ label.overlay-right:before,
+div input.hide:checked ~ label.overlay-bottom:before,
+div input.hide:checked ~ label.overlay-left:before,
+div input.hide:checked ~ label.overlay-left-o:before,
+div input.hide:checked ~ label.overlay-bottom-left:before,
+div input.hide:checked ~ label.overlay-top-right:before,
+div input.hide:checked ~ label.overlay-left-o:before{
     background:white;           border-radius: 1px;         padding:0.2em 1em;          cursor:pointer;
     content: "Klikk her for å lukke";}
 .hide {display:none; height:0; width:0; position:absolute;  left:-99999999px}
@@ -405,9 +407,9 @@ p.bett {
     text-align:center;          color:#fff;         font-size:22px;         padding:0.2em; 
     border-bottom:2px solid white;}
 p.circle{
-    width:30px;                 height: 30px;       text-align:center;      margin:5px 0 5px 0;
-    color:#fff;                 font-size:18px;     border:2px solid white; border-radius: 50%;
-    margin-left:calc(50% - 14px);}
+    width:32px;                 height: 32px;       text-align:center;      margin:10px 0 2px 0;
+    color:#fff;                 font-size:20px;     border:2px solid white; border-radius: 50%;
+    margin-left:calc(50% - 14px);padding-top:1px;}
 p.circle-grade{
     width:25px;                 height: 25px;       text-align:center;      margin:-34px 0 0 84%;
     color:#fff;                 font-size:16px;     border:2px solid gold;border-radius: 50%;
@@ -418,8 +420,8 @@ div.barrier {
     background-color:#FFA200;
 }
 h1.center-info {
-    font-size:3em;              font-family :Arial; max-width: 11em;            border-bottom: 0.1em solid black;  
-    margin:0.8em auto;          text-align:center;  padding-top:0.5em;          margin-top:0;
+    font-size:3em;              font-family :Arial; max-width: 11em;            /*border-bottom:Noe*/;  
+    margin:0.3em auto;          text-align:center;  padding-top:0.5em;          margin-top:0;
     }
 
 div.content-info{
@@ -462,11 +464,11 @@ div.diary-section {
     width:20vw;                 height:580px;           background-color:#222;  top:0;
     display:inline-block;       left:0;                 margin:0;               z-index:2; position:fixed;}
 div.diary-section-content {
-    width:20vw;                 height:88vh;            background-color:#222;  overflow-x:hidden;
-    display:inline-block;       left:0;                 margin-top:12vh;        overflow-y:auto;
+    width:20vw;                 height:calc(100vh - 54px); background-color:#222;overflow-x:hidden;
+    display:inline-block;       left:0;                 margin-top:54px;        overflow-y:auto;
     z-index:4; position:fixed;}
 label.diary-type {
-    padding:0.3em 100% 0.4em 1em;font-size:18px;        width:200px;           background:#333;
+    padding:0.3em 100% 0.4em 1em;font-size:18px;        width:200px;            background:#333;
     margin:20px 0px 20px 0;     line-height:42px;       overflow-x:hidden;
 }
 div.diary-section-other{
@@ -485,7 +487,7 @@ div.diary-section-other h1,div.diary-section-other h2{text-shadow: 1px 2px 0.5px
 
 
 /**==================== Standarer ====================**/
-img.img {width:81.4%; height:405px;margin:0 0 0 18.6%; z-index:0; position:absolute;}
+img.img {width:81.4%; height:422px;margin:0 0 0 18.6%; z-index:0; position:absolute;}
 iframe.youtube {width:100%; height:95vh; margin-top:20px;}
 
 .right {float:right;}
