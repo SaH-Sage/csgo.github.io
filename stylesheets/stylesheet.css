@@ -105,11 +105,11 @@ div label.overlay-top,div label.overlay-right,
 div label.overlay-bottom,div label.overlay-left,
 div div.overlay-content-left-o,div label.overlay-left-o,
 div label.overlay-top-right,div label.overlay-bottom-left{
-        transition: 512ms ease-in-out;
-     -o-transition: 512ms ease-in-out;
-    -ms-transition: 512ms ease-in-out;
-   -moz-transition: 512ms ease-in-out;
--webkit-transition: 512ms ease-in-out;}
+        transition: 600ms ease-in-out;
+     -o-transition: 600ms ease-in-out;
+    -ms-transition: 600ms ease-in-out;
+   -moz-transition: 600ms ease-in-out;
+-webkit-transition: 600ms ease-in-out;}
 
 div label.overlay-top,div label.overlay-right,
 div label.overlay-bottom,div label.overlay-left,
@@ -123,7 +123,7 @@ div label.overlay-top   {top:-130%;}
 div label.overlay-right {right:-110%; top:0;}   
 div label.overlay-bottom{bottom:-110%;left:0;}
 div label.overlay-left  {left:-110%;  top:0;}
-div label.overlay-left-o{left:-180%;  top:7.7%;}
+div label.overlay-left-o{left:-240%;  top:7.7%;}
 div label.overlay-bottom-left{left:-110%;  bottom:-110%;}
 div label.overlay-top-right{right:-110%;  top:-110%;}
 div div.overlay-content-top,div div.overlay-content-right,
@@ -138,7 +138,7 @@ div div.overlay-content-top    {left:0;                     top:-120%;}
 div div.overlay-content-right  {right:-110%;                top:10%;}
 div div.overlay-content-bottom {left:0;                     bottom:-120%;}
 div div.overlay-content-left   {left:-110%;                 top:10%;}
-div.overlay-content-left-o     {left:-180%;                 top:7.7%;}
+div.overlay-content-left-o     {left:-240%;                 top:7.7%;}
 div.overlay-content-left-o  p,div.overlay-content-left-o ul {text-shadow:none;}
 div input.hide:checked ~ label.overlay-top,      
 div input.hide:checked ~ label.overlay-right,    
@@ -411,9 +411,9 @@ p.circle{
     color:#fff;                 font-size:20px;     border:2px solid white; border-radius: 50%;
     margin-left:calc(50% - 14px);padding-top:1px;}
 p.circle-grade{
-    width:25px;                 height: 25px;       text-align:center;      margin:-34px 0 0 84%;
-    color:#fff;                 font-size:16px;     border:2px solid gold;border-radius: 50%;
-    position:absolute;}
+    width:25px;                 height: 25px;       text-align:center;      margin:-32px 0 0 84%;
+    color:#fff;                 font-size:16px;     border:2px solid gold;  border-radius: 50%;
+    position:absolute;          padding:0 0px 0 0;}
 
 div.barrier { 
     width:100%;                 height:4vw;         margin:0vw 0;             clear:both;
@@ -473,7 +473,7 @@ label.diary-type {
 }
 div.diary-section-other{
     width:79.8%;                cursor:default;         top:0;                  z-index:1;
-    display:inline-block;       position:absolute;      padding-top:4vw;        right:0;
+    display:inline-block;       position:absolute;      padding-top:2.4vw;        right:0;
     background:transparent;     color:#FFA200;          font-weight:800;        text-shadow: 1px 2px 0.5px #22314E;
     text-shadow: -1px 0  0.4px #22314E, 0 1px 0.4px #22314E, 1px 0 0.4px #22314E, 0 -1px 0.4px #22314E;
     font-size:19px;}
