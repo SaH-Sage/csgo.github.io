@@ -91,7 +91,7 @@ nav.menu ul li.left ul input.login {
     background:transparent;     color:black;                padding:4.2px;              margin-left:-35px;
     vertical-align:middle;      display:inline-block;       z-index:5;                  width:31px;}
   div div.iconVW{
-    background:transparent;     float:right;                padding:0px;            margin:-2.86vw 0.18vw 0 0;
+    background:transparent;     float:right;                padding:0px;                margin:-2.86vw 0.18vw 0 0;
     vertical-align:middle;      width:2vw;                  height:0.4vw; }
 nav.menu ul li.left ul input.button-clean {
     padding-left:18px;          color:Black;                background:white;           border: 0; 
@@ -115,7 +115,7 @@ div label.overlay-top,div label.overlay-right,
 div label.overlay-bottom,div label.overlay-left,
 div label.overlay-top-right,div label.overlay-bottom-left { 
     position:fixed;             display:block;      width:100%;                 height:100%;
-    background:Gray;            z-index:10;         cursor:pointer;}
+    background:Gray;            z-index:10;         cursor:pointer;     }
 label.overlay-left-o {
     position:fixed;          display:block;      width:79.75%;                 height:100%;
     background:#fff;         z-index:2;          cursor:pointer;}
@@ -123,7 +123,7 @@ div label.overlay-top   {top:-130%;}
 div label.overlay-right {right:-110%; top:0;}   
 div label.overlay-bottom{bottom:-110%;left:0;}
 div label.overlay-left  {left:-110%;  top:0;}
-div label.overlay-left-o{left:-240%;  top:7.7%;}
+div label.overlay-left-o{left:-240%;  top:54px;}
 div label.overlay-bottom-left{left:-110%;  bottom:-110%;}
 div label.overlay-top-right{right:-110%;  top:-110%;}
 div div.overlay-content-top,div div.overlay-content-right,
@@ -138,7 +138,7 @@ div div.overlay-content-top    {left:0;                     top:-120%;}
 div div.overlay-content-right  {right:-110%;                top:10%;}
 div div.overlay-content-bottom {left:0;                     bottom:-120%;}
 div div.overlay-content-left   {left:-110%;                 top:10%;}
-div.overlay-content-left-o     {left:-240%;                 top:7.7%;}
+div.overlay-content-left-o     {left:-240%;                 top:54px;}
 div.overlay-content-left-o  p,div.overlay-content-left-o ul {text-shadow:none;}
 div input.hide:checked ~ label.overlay-top,      
 div input.hide:checked ~ label.overlay-right,    
@@ -146,20 +146,20 @@ div input.hide:checked ~ label.overlay-bottom,
 div input.hide:checked ~ label.overlay-left,
 div input.hide:checked ~ label.overlay-bottom-left,
 div input.hide:checked ~ label.overlay-top-right   {top:0;right:0;bottom:0;left:0; }
-div input.hide:checked ~ label.overlay-left-o      {left:20vw;  top:7.7%;}
+div input.hide:checked ~ label.overlay-left-o      {left:20vw;  top:54px;}
 div input.hide:checked ~ div.overlay-content-top   {top:10%;}
 div input.hide:checked ~ div.overlay-content-right {right:0;}
 div input.hide:checked ~ div.overlay-content-bottom{bottom:10%;}
 div input.hide:checked ~ div.overlay-content-left  {left:0;}
-div input.hide:checked ~ div.overlay-content-left-o{left:20vw;top:7.7%;}
-div input.hide:checked ~ label.overlay-top:before,
-div input.hide:checked ~ label.overlay-right:before,
-div input.hide:checked ~ label.overlay-bottom:before,
-div input.hide:checked ~ label.overlay-left:before,
-div input.hide:checked ~ label.overlay-left-o:before,
-div input.hide:checked ~ label.overlay-bottom-left:before,
-div input.hide:checked ~ label.overlay-top-right:before,
-div input.hide:checked ~ label.overlay-left-o:before{
+div input.hide:checked ~ div.overlay-content-left-o{left:20vw;top:54px;}
+label.overlay-top:before,
+label.overlay-right:before,
+label.overlay-bottom:before,
+label.overlay-left:before,
+label.overlay-left-o:before,
+label.overlay-bottom-left:before,
+label.overlay-top-right:before,
+label.overlay-left-o:before{
     background:white;           border-radius: 1px;         padding:0.2em 1em;          cursor:pointer;
     content: "Klikk her for å lukke";}
 .hide {display:none; height:0; width:0; position:absolute;  left:-99999999px}
@@ -167,14 +167,18 @@ div label.overlay-top,div label.overlay-right,
 div label.overlay-bottom,div label.overlay-left,label.overlay-left-o {
     text-align: center;         text-align: center;         color: black;               background-color: rgba(128,128,128,.6);
     font-size:2vw;              line-height:4.5vw;}
+label.overlay-left-o { padding-top:37.8vw;}
+div input.hide:checked ~ label.overlay-left-o:before{content: "Click here to close";}
 div label.overlay-top:hover,div label.overlay-right:hover,
-div label.overlay-bottom:hover,div label.overlay-left:hover,label.overlay-left-o:before {   color: #888;}
+label.overlay-top:hover 
+label.overlay-right:hover,
+label.overlay-bottom:hover,
+label.overlay-left:hover,
+label.overlay-left-o:hover {color: #888;}
 label.toggle {color:#fff;       cursor:pointer;             line-height:190%;}
 a, label.toggle{text-decoration:underline solid white;-webkit-text-decoration:underline dotted white!important}
 a:hover, label.toggle:hover{text-decoration:underline dotted white;-webkit-text-decoration:underline dotted white!important}  /* Fikse underlinjen*/
-
-/*a, label.toggle{text-decoration:none;border-bottom:1px solid white;}
-a:hover, label.toggle:hover{border-bottom:1px dotted white;}*/
+/* Prøve å lage animasjon når den er aktiv*/
 
 
 nav.menu ul ul ul {
@@ -467,10 +471,12 @@ div.diary-section-content {
     width:20vw;                 height:calc(100vh - 54px); background-color:#222;overflow-x:hidden;
     display:inline-block;       left:0;                 margin-top:54px;        overflow-y:auto;
     z-index:4; position:fixed;}
+div.diary-section-content label:visited{color:Green;}
 label.diary-type {
     padding:0.3em 100% 0.4em 1em;font-size:18px;        width:200px;            background:#333;
     margin:20px 0px 20px 0;     line-height:42px;       overflow-x:hidden;
 }
+label:hover {colo}
 div.diary-section-other{
     width:79.8%;                cursor:default;         top:0;                  z-index:1;
     display:inline-block;       position:absolute;      padding-top:2.4vw;        right:0;
@@ -487,7 +493,7 @@ div.diary-section-other h1,div.diary-section-other h2{text-shadow: 1px 2px 0.5px
 
 
 /**==================== Standarer ====================**/
-img.img {width:81.4%; height:422px;margin:0 0 0 18.6%; z-index:0; position:absolute;}
+img.img {width:81.4%; height:calc(422px);margin:0 0 0 18.6%; z-index:0; position:absolute;}
 iframe.youtube {width:100%; height:95vh; margin-top:20px;}
 
 .right {float:right;}
@@ -601,7 +607,7 @@ input:checked + label:before {
   content: '';
   background:#666;
 }
-   */
+   */2
     
 
     
