@@ -170,11 +170,11 @@ div label.overlay-bottom,div label.overlay-left,label.overlay-left-o {
 label.overlay-left-o { padding-top:37.8vw;}
 div input.hide:checked ~ label.overlay-left-o:before{content: "Click here to close";}
 div label.overlay-top:hover,div label.overlay-right:hover,
-label.overlay-top:hover 
-label.overlay-right:hover,
-label.overlay-bottom:hover,
-label.overlay-left:hover,
-label.overlay-left-o:hover {color: #888;}
+div label.overlay-top:hover 
+div label.overlay-right:hover,
+div label.overlay-bottom:hover,
+div label.overlay-left:hover,
+div label.overlay-left-o:hover {color: #888;}
 label.toggle {color:#fff;       cursor:pointer;             line-height:190%;}
 a, label.toggle{text-decoration:underline solid white;-webkit-text-decoration:underline dotted white!important}
 a:hover, label.toggle:hover{text-decoration:underline dotted white;-webkit-text-decoration:underline dotted white!important}  /* Fikse underlinjen*/
