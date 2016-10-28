@@ -18,7 +18,7 @@ section h1 a{color:#FFA200; text-decoration:solid underline;}
 section h1 a:hover{color:#999; text-decoration:solid underline;}
 a:visited{color:#999;}
 /*ha { text-decoration: none;    color: #007edf;}
-a:hover { color: deepskyblue; }​
+a:hover { color: deepskyblue; }
 section a:visited { color: #551a8b; }
 /2 {
   padding-bottom: 12px;
@@ -493,7 +493,7 @@ div.diary-section-other h1,div.diary-section-other h2{text-shadow: 1px 2px 0.5px
 
 
 /**==================== Standarer ====================**/
-img.img {width:81.4%; height:calc(422px);margin:0 0 0 18.6%; z-index:0; position:absolute;}
+img.img {width:81.4%; height:500px;margin:0 0 0 18.6%; z-index:0; position:absolute;}
 iframe.youtube {width:100%; height:95vh; margin-top:20px;}
 
 .right {float:right;}
@@ -638,19 +638,16 @@ span[placeholder]:hover:after {
 }  
 h2 span[placeholder]:hover:after {font-size:0.65em;}
 ul   span[placeholder]:hover:after {width:24vh;}
-p.circle-grade span[placeholder]:hover:after {margin:-27px 0 0 -7.8vw;width:8vw;padding:auto 0.2vw;}
+p.circle-grade span[placeholder]:hover:after {margin:-27px 0 0 -7.8vw;width:8vw;}
 
-::-webkit-scrollbar              {
-    background:#678;
-    width: 1.2vw;}
+::-webkit-scrollbar              {background:#678;  width: 1vw;}
 ::-webkit-scrollbar-button       {background:#678;}
 ::-webkit-scrollbar-track        {background:#000;}
 ::-webkit-scrollbar-track-piece  {background:#678} 
 ::-webkit-scrollbar-thumb {
     background:#FFA200;
-    border-radius: 20px;
+    border-radius: 1px;
     width:80%;
-    -webkit-box-shadow: inset 0 0 6.4px rgba(0,0,0,1); 
 }
 ::-webkit-scrollbar-corner       {background:white; }
 ::-webkit-resizer                { /* 7 */ }
@@ -658,5 +655,4 @@ p.circle-grade span[placeholder]:hover:after {margin:-27px 0 0 -7.8vw;width:8vw;
 ::-webkit-scrollbar-button:increment:hover {background:blue;}
 ::-webkit-scrollbar-button:increment:before{background:blue;}
 ::-webkit-scrollbar-button:decrement:hover {background:green;}
-
 
