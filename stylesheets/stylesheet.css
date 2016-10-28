@@ -431,7 +431,7 @@ h1.center-info {
 div.content-info{
     background-color:inherit;   font-size:1em;                  font-family:Calibri;            text-align:left;            
     z-index:1;                  display:inline-block;           float:left;                     position:relative;
-    padding:0.44vw 2%;          overflow-x:auto;                cursor:default;                 }
+    padding:0.44vw 2%;          cursor:default;                 overflow-y:auto;                overflow-x:visible;}
 div.content-info label{display:block;}
 div.content-margin  {margin:1% 2%;}
 div.content-clear   {padding:0.44vw 1% 0.44vw 0.3%;}
@@ -607,8 +607,56 @@ input:checked + label:before {
   content: '';
   background:#666;
 }
-   */2
-    
+   */
 
-    
-    
+span:hover {
+    color: #FFA200;
+    position: relative;
+    cursor:pointer;
+    z-index:100;
+
+}
+
+span[placeholder]:hover:after {
+    content: attr(placeholder);
+    padding: 4px 8px;
+    font-size:0.77em;
+    text-shadow:none;
+    color: #000;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index:100;
+    overflow:hidden;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0px 0px 4px #222;
+    -webkit-box-shadow: 0px 0px 4px #222;
+    box-shadow: 0px 0px 4px #222;
+    background:#eeefff;
+}  
+h2 span[placeholder]:hover:after {font-size:0.65em;}
+ul   span[placeholder]:hover:after {width:24vh;}
+p.circle-grade span[placeholder]:hover:after {margin:-27px 0 0 -7.8vw;width:8vw;padding:auto 0.2vw;}
+
+::-webkit-scrollbar              {
+    background:#678;
+    width: 1.2vw;}
+::-webkit-scrollbar-button       {background:#678;}
+::-webkit-scrollbar-track        {background:#000;}
+::-webkit-scrollbar-track-piece  {background:#678} 
+::-webkit-scrollbar-thumb {
+    background:#FFA200;
+    border-radius: 20px;
+    width:80%;
+    -webkit-box-shadow: inset 0 0 6.4px rgba(0,0,0,1); 
+}
+::-webkit-scrollbar-corner       {background:white; }
+::-webkit-resizer                { /* 7 */ }
+::-webkit-scrollbar-button:increment:before{content: ">";color:#fff;width:1px}
+::-webkit-scrollbar-button:increment:hover {background:blue;}
+::-webkit-scrollbar-button:increment:before{background:blue;}
+::-webkit-scrollbar-button:decrement:hover {background:green;}
+
+
