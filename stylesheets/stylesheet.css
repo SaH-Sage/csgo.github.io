@@ -152,14 +152,14 @@ div input.hide:checked ~ div.overlay-content-right {right:0;}
 div input.hide:checked ~ div.overlay-content-bottom{bottom:10%;}
 div input.hide:checked ~ div.overlay-content-left  {left:0;}
 div input.hide:checked ~ div.overlay-content-left-o{left:20vw;top:54px;}
-label.overlay-top:before,
-label.overlay-right:before,
-label.overlay-bottom:before,
-label.overlay-left:before,
-label.overlay-left-o:before,
-label.overlay-bottom-left:before,
-label.overlay-top-right:before,
-label.overlay-left-o:before{
+label.overlay-top:after,
+label.overlay-right:after,
+label.overlay-bottom:after,
+label.overlay-left:after,
+label.overlay-left-o:after,
+label.overlay-bottom-left:after,
+label.overlay-top-right:after,
+label.overlay-left-o:after{
     background:white;           border-radius: 1px;         padding:0.2em 1em;          cursor:pointer;
     content: "Klikk her for å lukke";}
 .hide {display:none; height:0; width:0; position:absolute;  left:-99999999px}
@@ -167,8 +167,8 @@ div label.overlay-top,div label.overlay-right,
 div label.overlay-bottom,div label.overlay-left,label.overlay-left-o {
     text-align: center;         text-align: center;         color: black;               background-color: rgba(128,128,128,.6);
     font-size:2vw;              line-height:4.5vw;}
-label.overlay-left-o { padding-top:37.8vw;}
-div input.hide:checked ~ label.overlay-left-o:before{content: "Click here to close";}
+label.overlay-left-o { padding-top:90vh;}
+div input.hide:checked ~ label.overlay-left-o:after{content: "Click here to close";}
 div label.overlay-top:hover,div label.overlay-right:hover,
 div label.overlay-top:hover 
 div label.overlay-right:hover,
