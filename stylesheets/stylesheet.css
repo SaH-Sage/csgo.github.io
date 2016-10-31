@@ -45,7 +45,7 @@ nav.menu ul li a, nav.menu ul ul li {
     -ms-transition:background 350ms cubic-bezier(.66,.17,.24,.83);
    -moz-transition:background 350ms cubic-bezier(.66,.17,.24,.83);
 -webkit-transition:background 512ms cubic-bezier(.66,.17,.24,.83);}
-nav.menu ul div.right li a:hover  {background: #1E90FF;}
+nav.menu ul div.right li a:hover  {background:#FFA200;}
 /*nav.menu ul li a.active     {border-bottom: 0.3em solid #1E90FF;}a:hover:not(.active)*/
 nav.menu ul li.left         {float: left;                   display:block;}
 nav.menu ul a.welcome label {
@@ -69,7 +69,7 @@ nav.menu .spinn:hover > a{
      -o-transform: rotate(90deg);
         transform: rotate(909000deg);}
 nav.menu ul ul,nav.menu ul li.left ul {
-    max-height: 0px;            position:absolute;          z-index:4;                  background-color:rgba(77,0,38,0.7);
+    max-height: 0px;            position:absolute;          z-index:4;                  background-color:#22314E;
     min-width:180px;            overflow:hidden;            font-size:0.8em;
         transition:max-height 512ms ease;
      -o-transition:max-height 512ms ease;
@@ -78,8 +78,8 @@ nav.menu ul ul,nav.menu ul li.left ul {
 -webkit-transition:max-height 512ms ease;}
 nav.menu ul div.right ul            {right:0; }
 nav.menu ul li.left ul              {left:0;                min-width:300px;}
-nav.menu ul div.right ul li:hover   {cursor:pointer;        background-color:#1E90FF} 
-nav.menu ul div.right li:hover > a  {background:#1E90FF;}
+nav.menu ul div.right ul li:hover   {cursor:pointer;        background-color:#FFA200} 
+nav.menu ul div.right li:hover > a  {background:#FFA200;}
 nav.menu ul div.right li:hover ul,
 nav.menu ul li.left:hover ul        {max-height:260px;}
 nav.menu ul div.right ul li         {display:block;}
@@ -431,7 +431,7 @@ h1.center-info {
 div.content-info{
     background-color:inherit;   font-size:1em;                  font-family:Calibri;            text-align:left;            
     z-index:1;                  display:inline-block;           float:left;                     position:relative;
-    padding:0.44vw 2%;          cursor:default;                 overflow-y:auto;                overflow-x:visible;}
+    padding:0.44vh 2%;          cursor:default;                 overflow-y:auto;                overflow-x:visible;}
 div.content-info label{display:block;}
 div.content-margin  {margin:1% 2%;}
 div.content-clear   {padding:0.44vw 1% 0.44vw 0.3%;}
@@ -493,8 +493,8 @@ div.diary-section-other h1,div.diary-section-other h2{text-shadow: 1px 2px 0.5px
 
 
 /**==================== Standarer ====================**/
-img.img {width:81.4%; height:500px;margin:0 0 0 18.6%; z-index:0; position:absolute;}
-iframe.youtube {width:100%; height:95vh; margin-top:20px;}
+img.img {width:81.4%; height:60vh;margin:0 0 0 18.6%; z-index:0; position:absolute;}
+iframe.youtube {width:100%; height:95vh; margin-top:10vh;}
 
 .right {float:right;}
 .left {float:left;}
@@ -640,19 +640,16 @@ h2 span[placeholder]:hover:after {font-size:0.65em;}
 ul   span[placeholder]:hover:after {width:24vh;}
 p.circle-grade span[placeholder]:hover:after {margin:-27px 0 0 -7.8vw;width:8vw;}
 
-::-webkit-scrollbar              {background:#678;  width: 1vw;}
-::-webkit-scrollbar-button       {background:#678;}
-::-webkit-scrollbar-track        {background:#000;}
-::-webkit-scrollbar-track-piece  {background:#678} 
-::-webkit-scrollbar-thumb {
-    background:#FFA200;
-    border-radius: 1px;
-    width:80%;
-}
-::-webkit-scrollbar-corner       {background:white; }
-::-webkit-resizer                { /* 7 */ }
-::-webkit-scrollbar-button:increment:before{content: ">";color:#fff;width:1px}
-::-webkit-scrollbar-button:increment:hover {background:blue;}
-::-webkit-scrollbar-button:increment:before{background:blue;}
-::-webkit-scrollbar-button:decrement:hover {background:green;}
+::-webkit-scrollbar             {background:#678;   width: 1vw;}
+::-webkit-scrollbar-button      {height:0;}
+::-webkit-scrollbar-track       {background:#000;}
+::-webkit-scrollbar-track-piece {background:#678} 
+::-webkit-scrollbar-thumb       {background:#FFA200;    border-radius: 1px;}
+::-webkit-scrollbar-corner      {background:white; }
+::-moz-scrollbar             {background:#678;   width: 1vw;}
+::-moz-scrollbar-button      {height:0;}
+::-moz-scrollbar-track       {background:#000;}
+::-moz-scrollbar-track-piece {background:#678} 
+::-moz-scrollbar-thumb       {background:#FFA200;    border-radius: 1px;}
+::-moz-scrollbar-corner      {background:white; }
 
