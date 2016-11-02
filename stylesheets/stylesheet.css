@@ -117,7 +117,7 @@ div label.overlay-top-right,div label.overlay-bottom-left {
     position:fixed;             display:block;      width:100%;                 height:100%;
     background:Gray;            z-index:10;         cursor:pointer;     }
 label.overlay-left-o {
-    position:fixed;          display:block;      width:79.75%;                 height:100%;
+    position:fixed;          display:block;      width:79.78%;                 height:100%;
     background:#fff;         z-index:2;          cursor:pointer;}
 div label.overlay-top   {top:-130%;}
 div label.overlay-right {right:-110%; top:0;}   
@@ -131,7 +131,7 @@ div div.overlay-content-bottom,div div.overlay-content-left {
     position:fixed;             display:block;              width:100%;                 background:#333;                               overflow-y:auto;
     z-index:11;                 cursor:default}
 div.overlay-content-left-o {
-    position:fixed;             display:block;              width:79.75%;               background:#222;                               overflow-y:auto;
+    position:fixed;             display:block;              width:79.78%;               background:#222;                               overflow-y:auto;
     z-index:2;                  cursor:default}
 div.overlay-content-left-o p,div.overlay-content-left-o h2,div.overlay-content-left-o ul {color:#fff;}
 div div.overlay-content-top    {left:0;                     top:-120%;}
@@ -395,11 +395,11 @@ div.slideshow .h:checked ~ .labels > .h {background:orange;}
 
 /**==================== Section ====================**/
 
-section.bodey,section.bodey-home {
+section.body,section.body-home {
     width: 100%;                height:2500px;              background-color:#fff;      z-index:0;
-    Background: linear-gradient(0deg, white);               Background:-webkit-linear-gradient(90deg, #222,#000);}
-section.bodey-home{ margin-top:49vw;}
-section.bodey{margin-top:0vw;}
+    Background:black;               Background:-webkit-linear-gradient(90deg, #222,#000);}
+section.body-home{ margin-top:49vw;}
+section.body{margin-top:0vw;}
 
 div.list li,div.list ul {       list-style-type:disc;    margin-left:10px;    padding-left:4px;}
 div.list li li,div.list ul ul {
@@ -431,7 +431,7 @@ h1.center-info {
 div.content-info{
     background-color:inherit;   font-size:1em;                  font-family:Calibri;            text-align:left;            
     z-index:1;                  display:inline-block;           float:left;                     position:relative;
-    padding:0.44vh 2%;          cursor:default;                 overflow-y:auto;                overflow-x:visible;}
+    padding:0.44vh 2%;          cursor:default;                 overflow:visible;}
 div.content-info label{display:block;}
 div.content-margin  {margin:1% 2%;}
 div.content-clear   {padding:0.44vw 1% 0.44vw 0.3%;}
