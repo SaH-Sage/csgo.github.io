@@ -1,4 +1,6 @@
-body {font-family:Calibri; height:2500px; font-size:17px} /* Googl fonts*/
+body {font-family:Calibri; 
+      font-size:17px; 
+      background-color:#222;} /* Googl fonts*//*Golden ratio: 1.61803398875 --- 0.38196601125*/
 *{padding:0; 
 -webkit-box-sizing:border-box;
    -moz-box-sizing:border-box;
@@ -31,7 +33,7 @@ span:hover {cursor:pointer;}*/
 
 nav.menu  {
     position: fixed;            width: 100%;                font-family:calibri;        background-color:#22314E/*rgba(77,0,38,0.7)*/;                               z-index:3;                  top:0;
-    font-size: 22px;            list-style-type: none;      z-index:3;                  top:0;
+    font-size: 22px;            list-style-type: none;      z-index:9;                  top:0;
     list-style-type:none;}
 nav.menu ul div.right   {float: right;}
 nav.menu ul div.right li{display:inline-block;}
@@ -104,7 +106,8 @@ div div.overlay-content-bottom,div div.overlay-content-left,
 div label.overlay-top,div label.overlay-right,
 div label.overlay-bottom,div label.overlay-left,
 div div.overlay-content-left-o,div label.overlay-left-o,
-div label.overlay-top-right,div label.overlay-bottom-left{
+div label.overlay-top-right,div label.overlay-bottom-left,
+div.overlay-content-top-i,div.overlay-top-i{
         transition: 600ms ease-in-out;
      -o-transition: 600ms ease-in-out;
     -ms-transition: 600ms ease-in-out;
@@ -115,15 +118,19 @@ div label.overlay-top,div label.overlay-right,
 div label.overlay-bottom,div label.overlay-left,
 div label.overlay-top-right,div label.overlay-bottom-left { 
     position:fixed;             display:block;      width:100%;                 height:100%;
-    background:Gray;            z-index:10;         cursor:pointer;     }
+    background:Gray;            z-index:10;         cursor:pointer;}
 label.overlay-left-o {
-    position:fixed;          display:block;      width:79.78%;                 height:100%;
-    background:#fff;         z-index:2;          cursor:pointer;}
+    position:fixed;         display:block;          width:79.78%;               height:100%;
+    background:#fff;        z-index:3;              cursor:pointer;}
+label.overlay-top-i {
+    position:fixed;         display:block;          width:100%;                 height:100vh;
+    background:transparent; z-index:2;              cursor:pointer;             top:-130%;}
 div label.overlay-top   {top:-130%;}
 div label.overlay-right {right:-110%; top:0;}   
 div label.overlay-bottom{bottom:-110%;left:0;}
 div label.overlay-left  {left:-110%;  top:0;}
 div label.overlay-left-o{left:-240%;  top:54px;}
+div label.overlay-left-i{top:-130%;}
 div label.overlay-bottom-left{left:-110%;  bottom:-110%;}
 div label.overlay-top-right{right:-110%;  top:-110%;}
 div div.overlay-content-top,div div.overlay-content-right,
@@ -132,7 +139,19 @@ div div.overlay-content-bottom,div div.overlay-content-left {
     z-index:11;                 cursor:default}
 div.overlay-content-left-o {
     position:fixed;             display:block;              width:79.78%;               background:#222;                               overflow-y:auto;
-    z-index:2;                  cursor:default}
+    z-index:3;                  cursor:default}
+div.overlay-content-top-i {
+    position:fixed;             display:block;              width:50%;                  background-color:#22314E;                               overflow-y:auto;
+    z-index:2;                  cursor:default;             height:60vh;                border-radius:0.8vw;
+    top:-120%;                  left:34.8vw;                   }
+div.overlay-content-top-i h1.popp{
+    color:#FFA200;              font-size:4vw;              text-align:center;          font-size:4vw;
+    border-bottom:0.1em solid #FFA200;  ;margin:0;}
+div.overlay-content-top-i h2{
+    color:white;                text-align:center;          padding-top:1vh;}
+div.overlay-content-top-i p{
+    color:white;                padding:0.1em;}
+
 div.overlay-content-left-o p,div.overlay-content-left-o h2,div.overlay-content-left-o ul {color:#fff;}
 div div.overlay-content-top    {left:0;                     top:-120%;}
 div div.overlay-content-right  {right:-110%;                top:10%;}
@@ -140,18 +159,19 @@ div div.overlay-content-bottom {left:0;                     bottom:-120%;}
 div div.overlay-content-left   {left:-110%;                 top:10%;}
 div.overlay-content-left-o     {left:-240%;                 top:54px;}
 div.overlay-content-left-o  p,div.overlay-content-left-o ul {text-shadow:none;}
-div input.hide:checked ~ label.overlay-top,      
+div input.hide:checked ~ label.overlay-top, input.hide:checked ~ label.overlay-top-i,      
 div input.hide:checked ~ label.overlay-right,    
 div input.hide:checked ~ label.overlay-bottom,   
 div input.hide:checked ~ label.overlay-left,
 div input.hide:checked ~ label.overlay-bottom-left,
-div input.hide:checked ~ label.overlay-top-right   {top:0;right:0;bottom:0;left:0; }
+div input.hide:checked ~ label.overlay-top-right   {top:0;right:0;bottom:0;left:0;}
 div input.hide:checked ~ label.overlay-left-o      {left:20vw;  top:54px;}
 div input.hide:checked ~ div.overlay-content-top   {top:10%;}
 div input.hide:checked ~ div.overlay-content-right {right:0;}
 div input.hide:checked ~ div.overlay-content-bottom{bottom:10%;}
 div input.hide:checked ~ div.overlay-content-left  {left:0;}
 div input.hide:checked ~ div.overlay-content-left-o{left:20vw;top:54px;}
+div input.hide:checked ~ div.overlay-content-top-i {top:calc(20vh + 17px);}
 label.overlay-top:after,
 label.overlay-right:after,
 label.overlay-bottom:after,
@@ -396,7 +416,7 @@ div.slideshow .h:checked ~ .labels > .h {background:orange;}
 /**==================== Section ====================**/
 
 section.body,section.body-home {
-    width: 100%;                height:2500px;              background-color:#fff;      z-index:0;
+    width: 100%;                    min-height:100vh;         background-color:#fff;      z-index:0;
     Background:black;               Background:-webkit-linear-gradient(90deg, #222,#000);}
 section.body-home{ margin-top:49vw;}
 section.body{margin-top:0vw;}
@@ -466,11 +486,11 @@ div.content-info-3{
 
 div.diary-section {
     width:20vw;                 height:580px;           background-color:#222;  top:0;
-    display:inline-block;       left:0;                 margin:0;               z-index:2; position:fixed;}
+    display:inline-block;       left:0;                 margin:0;               z-index:8; position:fixed;}
 div.diary-section-content {
     width:20vw;                 height:calc(100vh - 54px); background-color:#222;overflow-x:hidden;
     display:inline-block;       left:0;                 margin-top:54px;        overflow-y:auto;
-    z-index:4; position:fixed;}
+    z-index:8; position:fixed;}
 div.diary-section-content label:visited{color:Green;}
 label.diary-type {
     padding:0.3em 100% 0.4em 1em;font-size:18px;        width:200px;            background:#333;
@@ -490,7 +510,15 @@ div.diary-section-other h1,div.diary-section-other h2{text-shadow: 1px 2px 0.5px
     float: left;                margin:0.11vw 0 0.5vw 0%;   width:100%; padding:0.6vw 0.3vw 0.2vw 0.6vw;
     display:block;              height:3.235vw;             line-height:100%;           font-size:0.65em;}
 .multiLineHigh{height:9.3vw;}
+/**==================== Index ====================**/
 
+div.index {
+    display:block;              background:#22314E;         width:65%;              height:75vh;
+    margin-top:20vh;            margin-left:17.5%;}
+div.index a{padding:50%; z-index:10;}
+div.index div{
+    margin:4vh 0 0 4%;          width: 44%;                 height:31vh;            background-color:#FFA200;
+    display:inline-block;       background-position: 96% 50%;overflow:hidden;}
 
 /**==================== Standarer ====================**/
 img.img {width:81.4%; height:60vh;margin:0 0 0 18.6%; z-index:0; position:absolute;}
@@ -531,8 +559,8 @@ div.list li li,div.list ul ul {
 /**==================== Footer ====================**/
     
 footer {
-    width:100%;                 height:24vw;             background:#222;       padding:1.4vw 2%;
-    color:white;                font-size:1.5em;
+    width:100%;                 height:24vw;            background:#222;        padding:1.4vw 2%;
+    color:white;                font-size:1.5em;        position:relative;      bottom:0; 
 }
     
 .select {
@@ -609,13 +637,6 @@ input:checked + label:before {
 }
    */
 
-span:hover {
-    color: #FFA200;
-    position: relative;
-    cursor:pointer;
-    z-index:100;
-
-}
 
 span[placeholder]:hover:after {
     content: attr(placeholder);
