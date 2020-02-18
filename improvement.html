@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset='utf-8'>
     <meta name="description" content="CSGO: Stuff">
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-    <title>CSGO Betting</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="Styles/style2.css">
+    <title>Improve!</title>
     <style>
         nav.menu ul li a.a {
             border-bottom: 0.3em solid #FFA200;
@@ -16,14 +16,14 @@
     <nav class="menu">
         <ul>
             <li class="left">
-                <a class="welcome" href="index.html" style="padding:13.5px 0 0 18px;">CS:GO Addict</a></li>
+                <a class="welcome" href="index.html">CS:GO Addict</a></li>
             <div class="right">
                 <li>
                     <a class="a" href="improvement.html">Improvment</a>
                 </li><li>
                     <a class="b" href="youtubers.html">Youtubers</a>
                 </li><li>
-                    <a class="c" href="betting.html">Betting</a>
+                    <a class="c" href="betting_guide.html">Betting Guide</a>
                 </li><li>
                     <a class="d" href="giveways.html">Giveways</a>
                 </li><li>
@@ -51,14 +51,132 @@
             </div>
         </ul>
     </nav>
-    <section class="body">
-        <h1 class="center-info" style="padding-top:40vh; color:white">Work in progress</h1>
-    </section>
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer" style="margin-left:20%;">
-        <footer class="inner">
-            <p>Hope you like :D</p>
-        </footer>
+
+
+    <script>
+ var slider = 1;
+ var byting;
+ window.onload = oppdater;
+ function oppdater(){
+  byting = setInterval(function(){bytt()}, 5000);
+  document.getElementById("slide1").onclick=function(){endreVerdi(1);}
+  document.getElementById("slide2").onclick=function(){endreVerdi(2);}
+  document.getElementById("slide3").onclick=function(){endreVerdi(3);}
+  document.getElementById("slide4").onclick=function(){endreVerdi(4);}
+  document.getElementById("slide5").onclick=function(){endreVerdi(5);}
+  document.getElementById("slide6").onclick=function(){endreVerdi(6);}
+  document.getElementById("slide7").onclick=function(){endreVerdi(7);}
+  document.getElementById("slide8").onclick=function(){endreVerdi(8);}
+  document.getElementById("slideRight").onclick=oek;
+  document.getElementById("slideLeft").onclick=reduser;
+ }
+ function bytt(){
+  if(slider===8){slider = 1;} else{slider++;}
+  var tekst = "slide" + slider;
+  document.getElementById(tekst).checked = true;
+ }
+ function endreVerdi(nummer){
+  clearInterval(byting);
+  slider = nummer;
+  byting = setInterval(function(){bytt()}, 20000);
+ }
+ function oek(){
+  clearInterval(byting);
+  if(slider===8){slider = 1;} else{slider++;}
+  var tekst = "slide" + slider;
+  document.getElementById(tekst).checked = true;
+  byting = setInterval(function(){bytt()}, 20000);
+ }
+ function reduser(){
+  clearInterval(byting);
+  if(slider===1){slider = 8;} else{slider--;}
+  var tekst = "slide" + slider;
+  document.getElementById(tekst).checked = true;
+  byting = setInterval(function(){bytt()}, 20000);
+ }
+    </script>
+
+    <div class="show" style="height:100vh;">
+        <div class="show-cont">
+            <h1>Counter-Strike: Global Offensive<br />A competitiv fps</h1>
+            <div class="button-right" id="slideRight"><i class="fa fa-arrow-right" aria-hidden="true"></i></div>
+            <div class="button-left" id="slideLeft"><i class="fa fa-arrow-left" aria-hidden="true"></i></div>
+        </div>
+        <div class="slideshow">
+            <input type="radio" class="imgSlideButtons a" id="slide1" name="dot" checked />
+            <input type="radio" class="imgSlideButtons b" id="slide2" name="dot" />
+            <input type="radio" class="imgSlideButtons c" id="slide3" name="dot" />
+            <input type="radio" class="imgSlideButtons d" id="slide4" name="dot" />
+            <input type="radio" class="imgSlideButtons e" id="slide5" name="dot" />
+            <input type="radio" class="imgSlideButtons f" id="slide6" name="dot" />
+            <input type="radio" class="imgSlideButtons g" id="slide7" name="dot" />
+            <input type="radio" class="imgSlideButtons h" id="slide8" name="dot" />
+
+            <div class="slide">
+                <div class="img a">
+                    <img src="https://global-offensive.com/wp-content/uploads/sites/2/2014/02/S6JaKVo.jpg" />
+                </div>
+                <div class="img b">
+                    <img src="https://s-media-cache-ak0.pinimg.com/originals/80/0f/34/800f34f32be122619fefc606df5ccd89.jpg" />
+                </div>
+                <div class="img c">
+                    <img src="http://cdn.mos.cms.futurecdn.net/5zHA4DXhWdQfiyaBKXeQyg.jpg" />
+                </div>
+                <div class="img d">
+                    <img src="https://i.ytimg.com/vi/sRGb1Zkqp9o/maxresdefault.jpg" />
+                </div>
+                <div class="img e">
+                    <img src="https://67.media.tumblr.com/52175f60a00f9d684bcb6071a720e862/tumblr_nqzkb1px0M1uan242o1_400.gif" />
+                </div>
+                <div class="img f">
+                    <img src="http://media.steampowered.com/apps/csgo/blog/images/gamma_case/gamma_knives_grid.jpg" />
+                </div>
+                <div class="img g">
+                    <img src="http://orig08.deviantart.net/db5b/f/2016/022/2/7/csgo_ranks_wallpaper__all_ranks__by_desinika-d9ovcav.png" />
+                </div>
+                <div class="img h">
+                    <img src="http://gaming-tools.com/wp-content/uploads/2015/08/cs-go-wallpaper.jpg" />
+                </div>
+            </div>
+            <div class="labels">
+                <label for="slide1" class="order a"></label>
+                <label for="slide2" class="order b"></label>
+                <label for="slide3" class="order c"></label>
+                <label for="slide4" class="order d"></label>
+                <label for="slide5" class="order e"></label>
+                <label for="slide6" class="order f"></label>
+                <label for="slide7" class="order g"></label>
+                <label for="slide8" class="order h"></label>
+            </div>
+        </div>
+        <img class="BG-image" src="../../Images/Nevuas.jpg" alt="BG" width="100%">
     </div>
+
+    <section class="body-home">
+        <div class="content-info content-info-3  justify">
+            <h2>Aming</h2>
+            <p>Cursor placment and recoil is essential for your aim!
+                Proin sit amet faucibus lorem, eu malesuada neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras imperdiet venenatis leo eu blandit. Pellentesque non nisi massa. Proin dignissim purus eget faucibus vehicula. Sed purus leo, mattis non nisi id, auctor molestie ex. Fusce rhoncus ut metus ut efficitur. Integer in augue id diam porta ultricies a sed ante. Proin nibh odio, tincidunt at dui quis, scelerisque blandit urna.</p>
+        </div>
+        <div class="content-info content-info-3 justify">
+            <h2><a href="improvement/maps.html">Maps</a></h2>
+            <p>Proin sit amet faucibus lorem, eu malesuada neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras imperdiet venenatis leo eu blandit. Pellentesque non nisi massa. Proin dignissim purus eget faucibus vehicula. Sed purus leo, mattis non nisi id, auctor molestie ex. Fusce rhoncus ut metus ut efficitur. Integer in augue id diam porta ultricies a sed ante. Proin nibh odio, tincidunt at dui quis, scelerisque blandit urna.</p>
+        </div>
+        <div class="content-info content-info-3 justify">
+            <h2>Presence</h2>
+            <p>Proin sit amet faucibus lorem, eu malesuada neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras imperdiet venenatis leo eu blandit. Pellentesque non nisi massa. Proin dignissim purus eget faucibus vehicula. Sed purus leo, mattis non nisi id, auctor molestie ex. Fusce rhoncus ut metus ut efficitur. Integer in augue id diam porta ultricies a sed ante. Proin nibh odio, tincidunt at dui quis, scelerisque blandit urna.</p>
+        </div>
+        <div class="barrier"></div>
+        <div class="content-info content-info-3-2 justify"><img class="info-img" src="http://images.akamai.steamusercontent.com/ugc/38601187010351139/EC46AD4B57231BFE07E1CCB21D8C3F2F472A8320/" /></div>
+        <div class="content-info content-info-3 justify" style="margin:0 0 0 -7vw;">
+            <h2>Analysation</h2>
+            <p>Proin sit amet faucibus lorem, eu malesuada neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras imperdiet venenatis leo eu blandit. Pellentesque non nisi massa. Proin dignissim purus eget faucibus vehicula. Sed purus leo, mattis non nisi id, auctor molestie ex. Fusce rhoncus ut metus ut efficitur. Integer in augue id diam porta ultricies a sed ante. Proin nibh odio, tincidunt at dui quis, scelerisque blandit urna.</p>
+        </div>
+         <!-- FOOTER  -->
+        <footer class="abs">
+            <p>We at CS:GO Addict want to make your associations with CS:GO as good as possible, as we believe it is a great game! We want you to be capable of improving as fast as possible and having as much fun as possible. Currently we are working on smokes spots, flashbangs and boost.<hr />This takes time and effort, helping us would be much appreciated. That's why we made it possible for you to profit at the same time as helping us out! If you use our affiliates code in the <a href="betting.html">betting section</a> (explained in detail there) you would do us a favour and we will be capable of selecting more time to this site!</p>
+        </footer>
+    </section>
+   
 </body>
 </html>
