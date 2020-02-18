@@ -1,0 +1,1255 @@
+@charset "UTF-8";
+html {
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+*:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  background: #222;
+  font-size: 16px;
+  min-height: 100%;
+  padding: 0 0 0 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Googl fonts*/
+u {
+  text-decoration: underline;
+}
+
+hr, br {
+  display: block;
+  position: relative;
+  clear: both;
+  width: 100%;
+  height: 0.14em;
+  margin: 1em auto;
+}
+
+hr.mobile {
+  display: none;
+}
+
+a:active
+img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+img.svg {
+  height: 1.5em;
+  position: absolute;
+  margin: -0.2em 0 0 -1.5em;
+}
+
+img.plain {
+  width: 100%;
+}
+
+.filter-invert {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+h1 span {
+  display: block;
+  clear: both;
+  padding: 0.1em 0;
+}
+
+::-moz-selection {
+  background: #FFA200;
+  color: #22314E;
+}
+
+::selection {
+  background: #FFA200;
+  color: #22314E;
+}
+
+/*9/            /*12/                                   /*9*/
+/*9*/
+/*9*/
+/*9*/
+/*9*/
+/* Double line break means styling of entierly new element
+      Line brek means new pice of styling of curent group
+        } means jumping back/lower is not child or directly connected to above
+          if no } above, this style is directly connected to above (childe or chare same properties)
+  */
+/* Phi: 1.61803398875    -   0.80901699437    -    1 - phi = 0.61803398875  --> /2 --> 30.9016994375 (for padding both)*/
+/* Tricks
+div[placeholder]:before {
+    content: attr(placeholder);
+    content: counter(line);         - http://jsfiddle.net/zppb29jw/5/
+}
+  */
+/*9/            /*12/                                   /*9*/
+/*9*/
+/*9*/
+/*9*/
+/*9*/
+nav {
+  display: block;
+  background: #22314E;
+  position: -webkit-sticky;
+  position: sticky;
+  /* Fiks this*/
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  z-index: 1;
+}
+
+nav div {
+  width: 1728px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1728px;
+  margin: 0 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+nav ul li a {
+  display: block;
+  font-size: 1.2em;
+  padding: 0.7em 0.1em;
+  text-align: center;
+  color: #eee;
+  z-index: 1;
+  border-bottom: 0.3em solid transparent;
+  border-top: 0.2em solid transparent;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  background: #22314E;
+}
+
+nav ul li.active a {
+  border-bottom: 0.3em solid #00a2ff;
+}
+
+nav.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: #19be9d;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: -webkit-sticky;
+  position: sticky;
+  /* Fiks this*/
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+nav.logo li a {
+  border-bottom: 0.3em solid transparent;
+  border-top: 0.2em solid transparent;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+nav.logo ul.left li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+nav.logo ul.left li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  border: none;
+}
+
+nav.logo ul.left li a p {
+  font-size: 1.15em;
+  padding-top: 0.75em;
+  height: 2.25em;
+  font-weight: bolder;
+  border-bottom: 0.3em solid transparent;
+  -webkit-transition: border-bottom 0.3s ease-out;
+  transition: border-bottom 0.3s ease-out;
+}
+
+nav.logo ul.left li a img {
+  height: 2.6em;
+  margin-top: 0.25em;
+}
+
+nav.logo ul.left li a:hover {
+  background: inherit;
+}
+
+nav.logo ul.left li a:hover p {
+  border-bottom: 0.3em solid #00a2ff;
+}
+
+nav.logo div.burger {
+  display: none;
+  cursor: pointer;
+}
+
+div.slideshow-container {
+  position: relative;
+  display: felx;
+  width: 100%;
+  background: #222;
+  /* The dots/bullets/indicators */
+  /* Next & previous buttons */
+  /* Position the "next button" to the right */
+  /* On hover, add a black background color with a little bit see-through */
+}
+
+div.slideshow-container div {
+  -webkit-transition: margin 0.5s ease-in-out;
+  transition: margin 0.5s ease-in-out;
+}
+
+div.slideshow-container div.nav-dots {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  bottom: 3.5em;
+  z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+div.slideshow-container div.nav-dots .dot {
+  position: relative;
+  height: 1em;
+  width: 1em;
+  margin: 0 0.2em;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.6em;
+  background: #9eb3c3;
+  -webkit-transition: background-color 0.5s, border 0.5s;
+  transition: background-color 0.5s, border 0.5s;
+  border: 0.2em solid #9eb3c3;
+}
+
+div.slideshow-container div.nav-dots .dot:hover {
+  background: #22314E;
+}
+
+div.slideshow-container div.nav-dots .active {
+  background-color: transparent;
+  border: 0.2em solid #FFA200;
+  -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+div.slideshow-container .prev, div.slideshow-container .next {
+  position: absolute;
+  font-size: 1.5em;
+  padding: 1em;
+  margin-top: -1.715em;
+  border-radius: 0 0.2em 0.2em 0;
+  cursor: pointer;
+  color: #eee;
+  font-weight: bold;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: 0.4s background ease;
+  transition: 0.4s background ease;
+}
+
+div.slideshow-container .next {
+  right: 0;
+  border-radius: 0.2em 0 0 0.2em;
+}
+
+div.slideshow-container .prev:hover, div.slideshow-container .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+div.slideshow-container .slide-0 {
+  margin-left: 0;
+}
+
+div.slideshow-container .slide-1 {
+  margin-left: -100%;
+}
+
+div.slideshow-container .slide-2 {
+  margin-left: -200%;
+}
+
+div.slideshow-container .slide-3 {
+  margin-left: -300%;
+}
+
+div.slideshow-container .slide-4 {
+  margin-left: -400%;
+}
+
+div.slideshow-container .slide-5 {
+  margin-left: -500%;
+}
+
+div.slideshow-container .slide-6 {
+  margin-left: -600%;
+}
+
+div.slideshow-container .slide-7 {
+  margin-left: -700%;
+}
+
+div.slideshow-container .slide-8 {
+  margin-left: -800%;
+}
+
+div.slideshow-container .slide-9 {
+  margin-left: -900%;
+}
+
+div.slideshow-container .slide-10 {
+  margin-left: -1000%;
+}
+
+div.slideshow-container .slide-11 {
+  margin-left: -1100%;
+}
+
+div.slideshow-container .slide-12 {
+  margin-left: -1200%;
+}
+
+div.slideshow-container .slide-13 {
+  margin-left: -1300%;
+}
+
+div.container-slide-main {
+  height: 80vh;
+  overflow: hidden;
+}
+
+div.container-slide-main .prev, div.container-slide-main .next {
+  top: 50%;
+}
+
+/* Specific for landing page */
+div.slideshow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+div.slideshow > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: margin 700ms;
+  transition: margin 700ms;
+  font-size: 1.8em;
+}
+
+div.slideshow > div > div {
+  position: absolute;
+  pointer-events: all;
+  color: #eee;
+}
+
+div.slideshow > div div.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+div.slideshow > div h1, div.slideshow > div h2, div.slideshow > div h3, div.slideshow > div h4, div.slideshow > div h5 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 2em auto 0 auto;
+  padding: 0.5em 1.5em;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  pointer-events: all;
+}
+
+div.slideshow > div > div.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 0.2em;
+  right: 10vw;
+  font-size: 0.8em;
+  z-index: 2;
+}
+
+div.slideshow > div > div.info > div {
+  -webkit-transform: skew(-45deg);
+          transform: skew(-45deg);
+  padding: 0 1em;
+  background: #FFA200;
+  -webkit-box-shadow: 0 0 0.1em #222;
+          box-shadow: 0 0 0.1em #222;
+  text-shadow: 0.05em 0.05em 1px #000;
+  margin: 0.8em 2em 0 0;
+}
+
+div.slideshow > div > div.info:hover > div:first-child p::after {
+  cursor: pointer;
+  background: #A40000;
+}
+
+div.slideshow > div > div.info:hover div.pop {
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+}
+
+div.slideshow > div > div.info p {
+  -webkit-transform: skew(45deg);
+          transform: skew(45deg);
+  padding: 0.4em 0.5em 0.35em;
+  pointer-events: all;
+  background: #FFA200;
+}
+
+div.slideshow > div > div.info p:after {
+  -webkit-transition: background 0.1s linear;
+  transition: background 0.1s linear;
+}
+
+div.slideshow > div > div.info > div:first-child p:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  background: inherit;
+  z-index: -1;
+  height: 100%;
+  width: 1em;
+  margin-left: 2.6em;
+  -webkit-transform: skew(-45deg);
+          transform: skew(-45deg);
+  -webkit-box-shadow: 0 0 0.1em #222;
+          box-shadow: 0 0 0.1em #222;
+}
+
+div.slideshow > div > div.info div.pop {
+  position: absolute;
+  bottom: 100%;
+  right: 0em;
+  margin-right: 0.25em;
+  z-index: -1;
+  font-size: 1em;
+  padding: 0;
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  pointer-events: all;
+  -webkit-transform: skew(0deg) rotateX(-90deg);
+          transform: skew(0deg) rotateX(-90deg);
+  -webkit-transform-origin: 0 125%;
+          transform-origin: 0 125%;
+  -webkit-transition: -webkit-transform 0.1s linear;
+  transition: -webkit-transform 0.1s linear;
+  transition: transform 0.1s linear;
+  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
+}
+
+div.slideshow > div > div.info div.pop div {
+  -webkit-transform: skew(45deg);
+          transform: skew(45deg);
+  padding: 0 1.6em;
+  background: #A40000;
+  -webkit-box-shadow: 0 0 0.1em #222;
+          box-shadow: 0 0 0.1em #222;
+}
+
+div.slideshow > div > div.info div.pop p {
+  -webkit-transform: skew(-45deg);
+          transform: skew(-45deg);
+  font-size: 0.7em;
+  padding-left: 0;
+  padding-right: 0;
+  background: inherit;
+}
+
+div.slideshow > div > div.info div.pop a {
+  color: #fff;
+  border-bottom: 0.1em solid;
+}
+
+div.slideshow > div > div.info div.pop a:visited {
+  color: #ccc;
+}
+
+div.slideshow img {
+  height: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  z-index: -1;
+}
+
+div.slideshow div.mobile {
+  display: none;
+}
+
+main {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  text-align: justify;
+  background: inherit;
+  min-height: 80vh;
+  color: #eee;
+}
+
+main > div:first-child {
+  padding-top: 1em;
+}
+
+main div.section {
+  width: 100%;
+  padding-left: calc(50% - 1920px / 2);
+  padding-right: calc(50% - 1920px / 2);
+}
+
+main a {
+  display: block;
+  color: #FFA200;
+  -webkit-text-decoration-style: double;
+          text-decoration-style: double;
+}
+
+main a:hover {
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+  color: #22314E;
+}
+
+main h1 {
+  font-size: 3em;
+  padding-bottom: 0.5em;
+  text-decoration: underline;
+}
+
+main h1, main h2, main h3, main h4, main h5 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+main p {
+  padding: 1em 0;
+}
+
+main p:first-child {
+  padding: 0 0 1em;
+}
+
+main p + hr, main p + br {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+main hr + p, main br + p {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+main div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main div div {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main div div {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main div div {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main div.padding > div {
+  padding: 2em 2em;
+}
+
+main div.center {
+  position: relative;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  padding: 30.9016994375% 0;
+  font-size: null;
+  text-align: center;
+  color: #eee;
+  min-height: 450px;
+}
+
+main div.center div {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+main div.center div.large p {
+  width: 61.803398875%;
+  margin: 0 auto;
+}
+
+main div.center h1, main div.center h2, main div.center h3, main div.center p {
+  padding: 0.1em 1em 0.3em;
+}
+
+main div.blue {
+  background: #22314E;
+  color: #fff;
+}
+
+main .info h1, main .info h2, main .info h3, main .info h4 {
+  text-align: center;
+  color: #eee;
+}
+
+.wrap-small {
+  min-width: 330px;
+  max-width: 700px;
+}
+
+.wrap-medium-small {
+  min-width: 400px;
+  max-width: 700px;
+}
+
+.wrap-medium {
+  min-width: 490px;
+}
+
+div.barrier {
+  width: 100%;
+  padding: 2.5em 0;
+  background: #FFA200;
+  clear: both;
+}
+
+.padding + div.barrier {
+  margin-top: 0;
+}
+
+form {
+  width: 70%;
+  margin: 0 auto;
+  padding: 0.5em 1em;
+  font-size: 1.5em;
+  color: white;
+  background: #22314E;
+  border-radius: 5px;
+}
+
+form input[type=text], form select, form textarea {
+  width: 100%;
+  font-size: 0.6em;
+  padding: 0.8em 1em;
+  margin: 0.5em 0 1.2em 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form option {
+  padding: 1em;
+}
+
+form option[value="none"] {
+  background-color: #ccc;
+}
+
+form input[tupe=text], form button, form .btn {
+  font-size: 0.6em;
+  padding: 0.9em 1.5em;
+  margin: 0.5em 0 0.5em 0;
+  background-color: #19be9d;
+  color: white;
+  border: 0em solid green;
+  border-top: none;
+  border-bottom: 0.35em solid green;
+  border-radius: 0.2em;
+  cursor: pointer;
+  /*
+    input[tupe=text], button, .btn          {font-size: 0.6em;                      padding: 0.9em 1.5em;                   margin: 0.5em 0;                        background-color: $turquoise;           color: white;
+                                            border: 0.1em solid green;            border-top: none;                       border-bottom: 0.3em solid green;     border-radius: 0.2em; // #4CAF50
+
+        &:hover {border-bottom: 0.15em solid green;   margin-top: 0.65em; //! margin needs to be the difrence in border-bottom added to initial margin-top - It looks nice if this results in the inital padding(on the sides)
+          //TODO Ikke sikker på hvordan jeg skal få til annimasjonen på margin active          transition: border 0.1s, margin 0.1s;//TODO - maby add BG change
+        }
+        &:active{border: 0em solid green; margin: 0.75em 0.1em;                   margin-bottom: 0.55em;                     width: calc(100% - 0.2em);} //! For push effect width needs to be reajusted to the borders witdh; ensure that margin hight is right
+                        //TODO Ikke sikker på hvordan jeg skal få til annimasjonen på margin active
+ */
+}
+
+form input[tupe=text]:hover, form button:hover, form .btn:hover {
+  border-bottom: 0.25em solid green;
+  margin: 0.6em 0 0.5em 0;
+}
+
+form input[tupe=text]:active, form button:active, form .btn:active {
+  border: 0em solid green;
+  margin-top: 0.75em;
+  margin-bottom: 0.6em;
+}
+
+input[type=submit], button {
+  border: 10px solid #eee;
+  border-top-width: 0px;
+  border-right-width: 1px;
+  border-bottom-width: 5px;
+  border-left-width: 1px;
+}
+
+div.txt-center {
+  text-align: center;
+}
+
+span.pressence {
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+
+.inwards {
+  -webkit-box-shadow: inset 0 0.7em 0.75em rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 0.7em 0.75em rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.inwards + div {
+  -webkit-box-shadow: 0 -0.7em 0.75em rgba(0, 0, 0, 0.5);
+          box-shadow: 0 -0.7em 0.75em rgba(0, 0, 0, 0.5);
+}
+
+.inwards + main > div:first-child {
+  -webkit-box-shadow: 0 -0.7em 0.75em rgba(0, 0, 0, 0.5);
+          box-shadow: 0 -0.7em 0.75em rgba(0, 0, 0, 0.5);
+}
+
+.outwards {
+  -webkit-box-shadow: 0 -0.7em 0.75em rgba(0, 0, 0, 0.5), 0 0.7em 0.75em rgba(0, 0, 0, 0.5);
+          box-shadow: 0 -0.7em 0.75em rgba(0, 0, 0, 0.5), 0 0.7em 0.75em rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.x1 {
+  font-size: 1em;
+}
+
+.x15 {
+  font-size: 1.5em;
+}
+
+.x16 {
+  font-size: 1.6em;
+}
+
+.x17 {
+  font-size: 1.7em;
+}
+
+.x18 {
+  font-size: 1.8em;
+}
+
+.x19 {
+  font-size: 1.9em;
+}
+
+.x2 {
+  font-size: 2em;
+}
+
+.x25 {
+  font-size: 25em;
+}
+
+.flex1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.flex2 {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.flex3 {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+.flex4 {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+
+.flex5 {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+
+.flex6 {
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+}
+
+.flex7 {
+  -webkit-box-flex: 7;
+      -ms-flex: 7;
+          flex: 7;
+}
+
+.flex8 {
+  -webkit-box-flex: 8;
+      -ms-flex: 8;
+          flex: 8;
+}
+
+div.flex-between {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+img.padding {
+  margin: 1em 0 2em;
+}
+
+footer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  margin: 1.5em 0 0 0;
+  background: #333;
+  width: 100%;
+  min-height: 12em;
+  padding: 0;
+  font-size: 1em;
+  color: #eee;
+  line-height: 1.21em;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+footer:hover {
+  background: #22314E;
+}
+
+footer:hover a:hover {
+  -webkit-text-decoration: dotted underline;
+          text-decoration: dotted underline;
+}
+
+footer h1, footer h2, footer h3, footer h4, footer h5 {
+  padding: 0 1em 1em 0;
+}
+
+footer p {
+  padding: 0 1em 1em 0;
+}
+
+footer div.container {
+  width: 1920px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2em auto 2em auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 2em;
+}
+
+footer div.container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 1em;
+  color: #eee;
+}
+
+footer div.container div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (max-width: 1500px) {
+  nav div {
+    width: 100%;
+  }
+  main div.section {
+    width: 100%;
+  }
+  main div.section > div {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  main div.section > div.center {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  nav ul {
+    width: 90vw;
+  }
+  footer div.container {
+    padding: 0 1em;
+    width: 100%;
+  }
+  footer div.container > div {
+    padding: 0 1em;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .padding {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  main div.center div.large p {
+    width: 80%;
+  }
+  form {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav.logo ul.left li {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 0 1em 0 2em;
+  }
+  nav.logo ul.left li a {
+    padding-bottom: 0.1em;
+  }
+  nav.logo ul.nav-links {
+    position: fixed;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    background: #19be9d;
+    -webkit-clip-path: circle(0px at 93% -10%);
+            clip-path: circle(0px at 93% -10%);
+    -webkit-transition: -webkit-clip-path 0.8s ease-out;
+    transition: -webkit-clip-path 0.8s ease-out;
+    transition: clip-path 0.8s ease-out;
+    transition: clip-path 0.8s ease-out, -webkit-clip-path 0.8s ease-out;
+  }
+  nav.logo ul.nav-links li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
+  }
+  nav.logo ul.nav-links li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    border-bottom: none;
+  }
+  nav.logo ul.nav-links li:nth-child(1) {
+    -webkit-transition: all 0.4s ease 0.2s;
+    transition: all 0.4s ease 0.2s;
+  }
+  nav.logo ul.nav-links li:nth-child(2) {
+    -webkit-transition: all 0.4s ease 0.4s;
+    transition: all 0.4s ease 0.4s;
+  }
+  nav.logo ul.nav-links li:nth-child(3) {
+    -webkit-transition: all 0.4s ease 0.6s;
+    transition: all 0.4s ease 0.6s;
+  }
+  nav.logo ul.nav-links li:nth-child(4) {
+    -webkit-transition: all 0.4s ease 0.75s;
+    transition: all 0.4s ease 0.75s;
+  }
+  nav.logo ul.nav-links li:nth-child(5) {
+    -webkit-transition: all 0.4s ease 0.9s;
+    transition: all 0.4s ease 0.9s;
+  }
+  nav.logo ul.nav-links li.fade {
+    opacity: 1;
+  }
+  nav.logo ul.nav-links li.active a {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  nav.logo ul.nav-links.open {
+    -webkit-clip-path: circle(1300px at 93% -10%);
+            clip-path: circle(1300px at 93% -10%);
+  }
+  nav.logo ul.nav-links.open ~ div.burger {
+    position: fixed;
+    right: 0;
+    width: 5em;
+    height: 2.95em;
+  }
+  nav.logo div.burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: 1;
+    font-size: 1.2em;
+    padding-right: 1.5em;
+  }
+  nav.logo div.burger .line, nav.logo div.burger .line:before, nav.logo div.burger .line:after {
+    width: 1.5em;
+    height: 0.2em;
+    margin: 0;
+    background: #eee;
+  }
+  nav.logo div.burger .line:before, nav.logo div.burger .line:after {
+    content: '';
+  }
+  nav.logo div.burger .line::before {
+    margin: -33.3333% 0 0 0;
+  }
+  nav.logo div.burger .line::after {
+    margin: 33.3333% 0 0 -100%;
+  }
+  main {
+    text-align: center;
+  }
+  main div.center {
+    font-size: 1.1em;
+  }
+  main div.center div p, main div.center div h1, main div.center div h2, main div.center div h3 {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  form {
+    width: 85%;
+  }
+  hr.mobile {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  main h1 {
+    font-size: 2.4em;
+  }
+  .wrap-medium {
+    min-width: 280px;
+  }
+  main div.center {
+    font-size: 0.9em;
+  }
+  form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  main h1 {
+    font-size: 2em;
+  }
+  .wrap-medium {
+    min-width: 250;
+  }
+  .wrap-small {
+    min-width: 250px;
+  }
+  .wrap-medium-small {
+    min-width: 250px;
+  }
+  main div.center {
+    font-size: 0.8em;
+  }
+  nav.logo ul.left li {
+    padding-left: 6vw;
+  }
+}
+
+.gold {
+  color: #19be9d;
+  background: #ffd700;
+}
+
+.csGold {
+  color: #fff;
+  background: #FFA200;
+}
+
+.blue {
+  color: #ff0051;
+  background: blue;
+}
+
+.green {
+  color: #fff;
+  background: #A2FF00;
+}
+
+.red {
+  color: #fff;
+  background: #ff0051;
+}
+
+/* Track Button*/
+::-webkit-scrollbar {
+  background: green;
+}
+
+::-webkit-scrollbar-button {
+  height: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #678;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #FFA200;
+  border-radius: 1px;
+}
+/*# sourceMappingURL=style.css.map */
