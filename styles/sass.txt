@@ -161,21 +161,23 @@ div.slideshow                               {display: flex;                     
         h1,h2,h3,h4,h5                      {align-self: center;                    margin: 2em auto 0 auto;                padding: 0.5em 1.5em;
                                             text-align: center;                     background: rgba(0,0,0,0.4);          pointer-events: all;}
         > div.info                          {display: flex;                         bottom: 0.2em;                          right: 10vw;                            font-size: 0.8em;                       z-index: 2;                 
-            > div                           {transform: skew(-45deg);               padding: 0 1em;                         background: $csGold;                    box-shadow: $slideBoxShadow;            text-shadow: $txtShadow;                margin: 0.8em 2em 0 0;//space to pop      
-
-            } //the padding is for the info hover
+            > div:first-child               {transform: skew(-45deg);               transform-origin: 100% 0;               padding: 0 1em;                         background: $csGold;
+                                            box-shadow: $slideBoxShadow;            text-shadow: $txtShadow;                margin: 0.8em 0 0 0;//space to pop for red-info    
+            }
+            &::after                        {content: '';                           position: absolute;                     height: 100%;                           width: 2.5em;                           right:-1.5em;
+                                             transform: skew(-45deg);}
             &:hover > div:first-child p::after{cursor:pointer;                      background: $csRed;}
             &:hover div.pop                 {transform: rotateX(0deg)}
-            p                               {transform: skew(45deg);    padding: 0.4em 0.5em 0.35em;            pointer-events: all;                    background: $csGold;}
+            p                               {transform: skew(45deg);                padding: 0.4em 0.5em 0.35em;            pointer-events: all;                    background: $csGold;}
             p:after                         {transition: background $transSlidePop;}
             > div:first-child p:after       {content: '';                           position: absolute;                     top: 0;                                 background: inherit;                    z-index: -1;
                                             height: 100%;                           width: 1em;                             margin-left: 2.6em;                     transform: skew(-45deg);                box-shadow: $slideBoxShadow;
             }
             //TODO when animating the 3D rotation the animation is also skewed
-            div.pop                         {position: absolute;                    bottom: 100%;                           right: 0em;                             margin-right: 0.25em;                   z-index: -1;    
+            div.pop                         {position: absolute;                    bottom: 100%;                           right: 0em;                             margin-right: -2.0em;                   z-index: -1;    
                                             font-size: 1em;                         padding: 0;                             background: transparent;                box-shadow: none;                       pointer-events: all;
-                                            transform: skew(0deg) rotateX(-90deg);  transform-origin: 0 125%;               transition: transform $transSlidePop;
-                div                         {transform: skew(45deg);                padding: 0 1.6em;                       background: $csRed;                     box-shadow: $slideBoxShadow;}
+                                            transform: skew(0deg) rotateX(90deg);   transform-origin: 0 125%;               transition: transform $transSlidePop;
+                div                         {transform: skew(45deg);                transform-origin: 0 100%; padding: 0 1.6em;                       background: $csRed;                     box-shadow: $slideBoxShadow;}
                 p                           {transform: skew(-45deg);               font-size: 0.7em;                       padding-left: 0;                        padding-right: 0;                       background: inherit;}
                 a                           {color: #fff;                         border-bottom: 0.1em solid;}
                 a:visited                   {color: #ccc;}
