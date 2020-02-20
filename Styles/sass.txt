@@ -1,5 +1,5 @@
 html {
-    height: 100%;
+    min-height: 100%;
     box-sizing: border-box;
 }
 
@@ -160,7 +160,7 @@ div.slideshow                               {display: flex;                     
         div.header                          {display: flex;                         height: 100%;                           width: 100%;}
         h1,h2,h3,h4,h5                      {align-self: center;                    margin: 2em auto 0 auto;                padding: 0.5em 1.5em;
                                             text-align: center;                     background: rgba(0,0,0,0.4);          pointer-events: all;}
-        > div.info                          {display: flex;                         bottom: 0.2em;                          right: 10vw;                            font-size: 0.8em;                       z-index: 2;                 
+        > div.info                          {display: flex;                         bottom: 0.2em;                          right: calc(10vw + 1em);                            font-size: 0.8em;                       z-index: 2;                 
             > div:first-child               {transform: skew(-45deg);               transform-origin: 100% 0;               padding: 0 1em;                         background: $csGold;
                                             box-shadow: $slideBoxShadow;            text-shadow: $txtShadow;                margin: 0.8em 0 0 0;//space to pop for red-info    
             }
